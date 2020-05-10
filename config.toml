@@ -12,7 +12,7 @@ theme = "hugo-sustain"
 
 [params]
   avatar = "IMG_1674 copy.png"
-  author = "Gianeen Magno"
+  author = "Gianeen"
   description = "Describe your website"
 
   # Custom assets can be linked with their paths relative to static/
