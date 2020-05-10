@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>about</title>
-      <link>/categories/about/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>/categories/about/</guid>
-      <description></description>
-    </item>
-    
-    <item>
       <title>projects</title>
       <link>/categories/projects/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
@@ -53,6 +44,15 @@
       <pubDate>Wed, 02 Apr 2014 00:00:00 +0000</pubDate>
       
       <guid>/categories/golang/</guid>
+      <description></description>
+    </item>
+    
+    <item>
+      <title>about</title>
+      <link>/categories/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/categories/about/</guid>
       <description></description>
     </item>
     

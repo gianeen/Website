@@ -12,15 +12,6 @@
     
     
     <item>
-      <title>About</title>
-      <link>/about/</link>
-      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
-      
-      <guid>/about/</guid>
-      <description>Who Am I? Hi THERE!! My name is Gianeen hehehehe. Here is my mf resume</description>
-    </item>
-    
-    <item>
       <title>Projects</title>
       <link>/projects/</link>
       <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
@@ -89,6 +80,15 @@ Follow the following steps:
     </item>
     
     <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Who Am I? Hey there! My name is Gianeen. I&amp;rsquo;m a Chipotle connoisseur, R&amp;amp;B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). I will be graduating this May from The University of Texas at Austin with a Bachelor of Science and Arts in Biology, a Bachelor of Arts in Health and Society (with a concentration in Health and the Economy), and a Business of Healthcare certificate.</description>
+    </item>
+    
+    <item>
       <title>Project 1- Beyoncé vs Solange: Which Knowles Sister is More Likely to Make You Get Up and Groove? by Gianeen Magno </title>
       <link>/project1gbm/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
@@ -109,10 +109,10 @@ library(vegan) ## Loading required package: permute ## Loading required package:
     
     <item>
       <title>Resume</title>
-      <link>/resume2020/</link>
+      <link>/new-post/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>/resume2020/</guid>
+      <guid>/new-post/</guid>
       <description>EDUCATION
 The University of Texas at Austin • May 2020
 • B.S.A. Biology, College of Natural Sciences

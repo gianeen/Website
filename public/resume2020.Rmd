@@ -1,6 +1,11 @@
 ---
 title: "Resume"
-output: html_document
+author: ''
+showpagemeta: false
+slug: new-post
+categories: []
+tags: []
+description: ''
 ---
 
 **EDUCATION**
