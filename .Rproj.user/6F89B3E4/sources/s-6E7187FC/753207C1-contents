@@ -37,5 +37,5 @@ title: About
 - learning about how I can work on myself for the sake of a) being kind to myself and b) being a better friend, daughter, sister, student, stranger, global citizen, and contributor to society 🙂
   - this Instagram account has taught me how to [uphold healthy boundaries](https://www.instagram.com/nedratawwab/) in my life 
   - this one has taught me [how to understand others better, as well as overcome any self-made fear or adversity](https://www.instagram.com/the.holistic.psychologist/)
-  - this one has taught me [how to healthily reassure myself that I am doing my best and that I will get to where I am meant to be](https://www.instagram.com/werenotreallystrangers/)
+  - this one has taught me [how to healthily reassure myself that I am doing my best and that life will eventually lead me to where I am meant to be](https://www.instagram.com/werenotreallystrangers/)
 
