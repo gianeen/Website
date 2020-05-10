@@ -1,11 +1,5 @@
 ---
 title: "Resume"
-author: ''
-showpagemeta: false
-slug: new-post
-categories: []
-tags: []
-description: ''
 ---
 
 **EDUCATION**

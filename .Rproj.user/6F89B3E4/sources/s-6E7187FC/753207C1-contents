@@ -8,7 +8,7 @@ title: About
 ---
 # Who Am I? 
 
-#####   Hey there! My name is Gianeen. I'm a Chipotle connoisseur, R&B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). 
+#####   Hey there! My name is Gianeen. I'm a Chipotle connoisseur, avid R&B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). 
 
 ##### I will be graduating this May from The University of Texas at Austin with a Bachelor of Science and Arts in Biology, a Bachelor of Arts in Health and Society (with a concentration in Health and the Economy), and a Business of Healthcare certificate.
 
@@ -16,7 +16,7 @@ title: About
 
 ##### Right after graduation, I will be conducting research with CDF-TX, where I will be investigating health disparities across race, ethnicity, and immigration in Texas. I will also be researching test access, diagnosis, and death rates for ethnic and racial minorities amidst COVID-19 in Texas. All of these efforts will be collectively utilized to push for policy change that ensures access to health for all children in the state of Texas. How neat is that!
 
-[🤠 HERE IS MY RESUME 🤠](/resume2020/)
+# [🤠 HERE IS MY RESUME 🤠](/resume2020/)
         
 
 
