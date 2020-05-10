@@ -9,7 +9,7 @@ title: Projects
 ---
 ## Projects 
 
-Here are some projects I have recently completed for my Computational Bio class Spring 2020 at UT:
+Here are some coding projects I have recently completed for my Computational Bio class at UT during my Spring 2020 semester:
 
 - [Exploratory Data Analysis with Tidyverse Tools: Beyoncé versus Solange](/project1gbm/)
 
