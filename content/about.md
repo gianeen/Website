@@ -16,7 +16,7 @@ title: About
 
 ##### Right after graduation, I will be conducting research with CDF-TX, where I will be investigating health disparities across race, ethnicity, and immigration in Texas. I will also be researching test access, diagnosis, and death rates for ethnic and racial minorities amidst COVID-19 in Texas. All of these efforts will be collectively utilized to push for policy change that ensures access to health for all children in the state of Texas. How neat is that!
 
-## [🤠 HERE IS MY RESUME 🤠](/resume2020/)
+[🤠 HERE IS MY RESUME 🤠](/resume2020/)
         
 
 

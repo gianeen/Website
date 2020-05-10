@@ -2,18 +2,18 @@
     "collab_server" : "",
     "contents" : "",
     "created" : 1589127937458.000,
-    "dirty" : true,
+    "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
     "hash" : "0",
     "id" : "753207C1",
-    "lastKnownWriteTime" : 1589136105,
-    "last_content_update" : 1589136116775,
+    "lastKnownWriteTime" : 1589137970,
+    "last_content_update" : 1589137970883,
     "path" : "~/Desktop/Website/content/about.md",
     "project_path" : "content/about.md",
     "properties" : {
-        "cursorPosition" : "20,1",
-        "scrollLine" : "13"
+        "cursorPosition" : "18,0",
+        "scrollLine" : "12"
     },
     "read_only" : false,
     "read_only_alternatives" : [
