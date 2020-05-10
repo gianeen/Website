@@ -1,6 +1,6 @@
 baseurl = "/"
 languageCode = "en-US"
-title = "hi, i'm gianeen"
+title = "🤠"
 # Enable comments by entering your Disqus shortname
 disqusShortname = ""
 # Enable Google Analytics by entering your tracking code
@@ -21,6 +21,7 @@ theme = "hugo-sustain"
 
 [params.social]
 
+  email= "gianeenmagno@gmail.com"
 
 ## Main Menu
 [[menu.main]]
