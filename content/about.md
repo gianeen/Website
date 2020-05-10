@@ -16,7 +16,4 @@ title: About
 
 
 
-EXCLUDE THE FOLLOWING:
-- [Exploratory Data Analysis with Tidyverse Tools: Beyoncé versus Solange](/project1gbm/)
 
-- [Modeling, Testing, and Classification of Beyoncé and Solange's Music](/project2gbm/)
