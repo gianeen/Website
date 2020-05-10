@@ -9,8 +9,8 @@ title: Projects
 ---
 ## Projects 
 
-Here are some projects I have recently completed:
+Here are some projects I have recently completed for my Computational Bio class Spring 2020 at UT:
 
-- [Exploratory Data Analysis with Tidyverse Tools](/project1gbm/)
+- [Exploratory Data Analysis with Tidyverse Tools: Beyoncé versus Solange](/project1gbm/)
 
-- [Modeling, Testing, and Classification](/project2gbm/)
+- [Modeling, Testing, and Classification of Beyoncé and Solange's Music](/project2gbm/)
