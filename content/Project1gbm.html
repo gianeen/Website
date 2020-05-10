@@ -1,0 +1,425 @@
+---
+title: 'Project 1- Beyoncé vs Solange: Which Knowles Sister is More Likely to Make
+  You Get Up and Groove? by Gianeen Magno '
+output:
+  pdf_document: default
+  html_document: default
+---
+
+
+
+<div id="introduction" class="section level1">
+<h1>0.) Introduction</h1>
+<p>The datasets that I have chosen are the audio features of Beyoncé Knowles and Solange Knowles’ tracks that are available on Spotify, specifically, their solo discographies that are studio albums and non-special edition. This dataset was <em>tediously</em> acquired by installing the package “spotifyr” and utilizing “Spotify for Developers” on Spotify’s website, as well as spending a/n (large) amount of time figuring out how to use Spotify’s API. I mainly decided to do this because I’ve always wondered how Spotify develops music suggestions based on users’ listening histories, and it was very interesting to see that there are so many components that goes behind a track in order to curate a playlist- from “Your Daily Mix” to “Discover Weekly.” So, for this project, I will be looking at the audio track features that determine our music suggestions from Spotify, but will do so by comparing the sensational music careers of Beyoncé and Solange Knowles. Although they are sisters by blood, each artist is distinct and creative in their own unique ways.</p>
+<p>In terms of the albums used, for Beyoncé, I analyzed the albums “Lemonade,” “4,” “I AM… SASHA FIERCE,” “B’Day,” and “Dangerously in Love.” I would have included her self-titled album, but that data was unfortunately unavailable. For Solange, I analyzed the albums “When I Get Home,” “A Seat at the Table,” “True,” and “Solo Star.”</p>
+<p>When creating a joint data set, the categorical variables I found it important to obtain are “artist,” “album,” “track,” and my numeric variables consisting of “danceability,” “energy,” and “valence.” According to Spotify’s Developer page, these numeric variables are “Audio Features” for a track, ranging in values from 0.00-1.00, with 1.00 being the highest. Based on their website, “danceability” describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. 0.00 is least danceable and 1.0 is the most danceable. “Energy” represents a perceptual measure of intensity and activity. Energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while classical music scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. “Valence” describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry).</p>
+</div>
+<div id="tidying-rearranging-widelong" class="section level1">
+<h1>1.) Tidying: Rearranging Wide/Long</h1>
+<pre class="r"><code>bey&lt;-read.csv(&quot;bey.csv&quot;)
+sol&lt;-read.csv(&quot;sol.csv&quot;)
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
+#Removing x
+bey&lt;-bey%&gt;%select(-X)
+sol&lt;-sol%&gt;%select(-X)
+
+
+#Removing artist name and album names to tidy specifically for Beyoncé
+bey-&gt;minusbey
+select(minusbey,-artist)-&gt;tidyingbey
+select(tidyingbey,-album)-&gt;tidyingbey
+tidyingbey</code></pre>
+<pre><code>##                                     track danceability energy valence
+## 1                       Pray You Catch Me        0.250  0.215  0.0746
+## 2                                 Hold Up        0.524  0.397  0.5520
+## 3  Don&#39;t Hurt Yourself (feat. Jack White)        0.614  0.686  0.6450
+## 4                                   Sorry        0.775  0.598  0.3560
+## 5               6 Inch (feat. The Weeknd)        0.516  0.637  0.3240
+## 6                           Daddy Lessons        0.643  0.503  0.5980
+## 7                            Love Drought        0.455  0.535  0.2160
+## 8                             Sandcastles        0.330  0.357  0.1010
+## 9             Forward (feat. James Blake)        0.387  0.133  0.0498
+## 10         Freedom (feat. Kendrick Lamar)        0.437  0.803  0.4060
+## 11                              All Night        0.574  0.573  0.6260
+## 12                              Formation        0.896  0.621  0.8180
+## 13                  Sorry - Original Demo        0.546  0.260  0.4210
+## 14                            Love On Top        0.652  0.748  0.6520
+## 15               Party (feat. André 3000)        0.648  0.593  0.7120
+## 16                         Schoolin&#39; Life        0.799  0.715  0.5510
+## 17                              Countdown        0.665  0.787  0.6990
+## 18                             I Miss You        0.718  0.523  0.8350
+## 19                          Dance for You        0.616  0.780  0.4710
+## 20                                 I Care        0.371  0.840  0.2280
+## 21                       Rather Die Young        0.628  0.665  0.4470
+## 22                                    1+1        0.303  0.384  0.2610
+## 23                            End of Time        0.711  0.811  0.7850
+## 24                  Run the World (Girls)        0.733  0.899  0.7600
+## 25                 Best Thing I Never Had        0.545  0.649  0.2970
+##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 56 rows ]</code></pre>
+<pre class="r"><code>#Untidying Beyoncé
+tidyingbey%&gt;%pivot_longer(c(&quot;danceability&quot;,&quot;energy&quot;,&quot;valence&quot;),names_to=&quot;audio features&quot;,values_to=&quot;value&quot;)-&gt;pivotedbey
+pivotedbey</code></pre>
+<pre><code>## # A tibble: 243 x 3
+##    track                                  `audio features`  value
+##    &lt;fct&gt;                                  &lt;chr&gt;             &lt;dbl&gt;
+##  1 Pray You Catch Me                      danceability     0.25  
+##  2 Pray You Catch Me                      energy           0.215 
+##  3 Pray You Catch Me                      valence          0.0746
+##  4 Hold Up                                danceability     0.524 
+##  5 Hold Up                                energy           0.397 
+##  6 Hold Up                                valence          0.552 
+##  7 Don&#39;t Hurt Yourself (feat. Jack White) danceability     0.614 
+##  8 Don&#39;t Hurt Yourself (feat. Jack White) energy           0.686 
+##  9 Don&#39;t Hurt Yourself (feat. Jack White) valence          0.645 
+## 10 Sorry                                  danceability     0.775 
+## # … with 233 more rows</code></pre>
+<pre class="r"><code>#Tidying again
+pivotedbey%&gt;%pivot_wider(names_from=&quot;audio features&quot;,values_from=&quot;value&quot;)-&gt;widetidybey
+widetidybey</code></pre>
+<pre><code>## # A tibble: 81 x 4
+##    track                                  danceability energy valence
+##    &lt;fct&gt;                                         &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+##  1 Pray You Catch Me                             0.25   0.215  0.0746
+##  2 Hold Up                                       0.524  0.397  0.552 
+##  3 Don&#39;t Hurt Yourself (feat. Jack White)        0.614  0.686  0.645 
+##  4 Sorry                                         0.775  0.598  0.356 
+##  5 6 Inch (feat. The Weeknd)                     0.516  0.637  0.324 
+##  6 Daddy Lessons                                 0.643  0.503  0.598 
+##  7 Love Drought                                  0.455  0.535  0.216 
+##  8 Sandcastles                                   0.33   0.357  0.101 
+##  9 Forward (feat. James Blake)                   0.387  0.133  0.0498
+## 10 Freedom (feat. Kendrick Lamar)                0.437  0.803  0.406 
+## # … with 71 more rows</code></pre>
+<pre class="r"><code>#Solange&#39;s turn
+sol-&gt;minussol
+select(minussol,-artist)-&gt;tidyingsol
+select(tidyingsol,-album)-&gt;tidyingsol
+tidyingsol</code></pre>
+<pre><code>##                                      track danceability energy valence
+## 1                        Things I Imagined        0.391  0.192  0.0390
+## 2                   S McGregor (interlude)        0.422  0.321  0.3610
+## 3                     Down With the Clique        0.664  0.459  0.3560
+## 4                          Way to the Show        0.594  0.710  0.5580
+## 5           Can I Hold the Mic (interlude)        0.633  0.169  0.5340
+## 6                                 Stay Flo        0.823  0.558  0.6740
+## 7                                   Dreams        0.661  0.368  0.2110
+## 8    Nothing Without Intention (interlude)        0.678  0.506  0.6230
+## 9                                   Almeda        0.827  0.553  0.0631
+## 10                               Time (is)        0.493  0.159  0.3800
+## 11                         My Skin My Logo        0.724  0.292  0.5240
+## 12 We Deal With the Freak&#39;n (intermission)        0.447  0.700  0.5450
+## 13                                  Jerrod        0.409  0.253  0.2180
+## 14                                    Binz        0.863  0.625  0.4560
+## 15                                 Beltway        0.313  0.189  0.0391
+## 16                  Exit Scott (interlude)        0.390  0.436  0.5250
+## 17                           Sound of Rain        0.800  0.526  0.4540
+## 18                Not Screwed! (interlude)        0.340  0.436  0.1660
+## 19                           I&#39;m a Witness        0.260  0.290  0.0383
+## 20                                    Rise        0.507  0.418  0.2400
+## 21                                   Weary        0.507  0.466  0.1100
+## 22          Interlude: The Glory is in You        0.538  0.259  0.8270
+## 23                       Cranes in the Sky        0.719  0.615  0.4650
+## 24                  Interlude: Dad Was Mad        0.631  0.314  0.6600
+## 25                                     Mad        0.827  0.477  0.5990
+##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 40 rows ]</code></pre>
+<pre class="r"><code>#Untidying Solange
+tidyingsol%&gt;%pivot_longer(c(&quot;danceability&quot;,&quot;energy&quot;,&quot;valence&quot;),names_to=&quot;audio features&quot;,values_to=&quot;value&quot;)-&gt;pivotedsol
+pivotedsol</code></pre>
+<pre><code>## # A tibble: 195 x 3
+##    track                  `audio features` value
+##    &lt;fct&gt;                  &lt;chr&gt;            &lt;dbl&gt;
+##  1 Things I Imagined      danceability     0.391
+##  2 Things I Imagined      energy           0.192
+##  3 Things I Imagined      valence          0.039
+##  4 S McGregor (interlude) danceability     0.422
+##  5 S McGregor (interlude) energy           0.321
+##  6 S McGregor (interlude) valence          0.361
+##  7 Down With the Clique   danceability     0.664
+##  8 Down With the Clique   energy           0.459
+##  9 Down With the Clique   valence          0.356
+## 10 Way to the Show        danceability     0.594
+## # … with 185 more rows</code></pre>
+<pre class="r"><code>#Tidying back to normal 
+pivotedsol%&gt;%pivot_wider(names_from=&quot;audio features&quot;,values_from=&quot;value&quot;)-&gt;widetidysol
+widetidysol</code></pre>
+<pre><code>## # A tibble: 65 x 4
+##    track                                 danceability energy valence
+##    &lt;fct&gt;                                        &lt;dbl&gt;  &lt;dbl&gt;   &lt;dbl&gt;
+##  1 Things I Imagined                            0.391  0.192  0.039 
+##  2 S McGregor (interlude)                       0.422  0.321  0.361 
+##  3 Down With the Clique                         0.664  0.459  0.356 
+##  4 Way to the Show                              0.594  0.71   0.558 
+##  5 Can I Hold the Mic (interlude)               0.633  0.169  0.534 
+##  6 Stay Flo                                     0.823  0.558  0.674 
+##  7 Dreams                                       0.661  0.368  0.211 
+##  8 Nothing Without Intention (interlude)        0.678  0.506  0.623 
+##  9 Almeda                                       0.827  0.553  0.0631
+## 10 Time (is)                                    0.493  0.159  0.38  
+## # … with 55 more rows</code></pre>
+<p>I tidyed my “sol” and “bey” data, removing the artist because that will not be needed until the datasets are joined together in order to distinguish Beyoncé from Solange. My data was already tidy, so I made them untidy with pivot_longer. Initially, the columns were “track,” “danceability,” “energy,” and “valence.” However, I pivoted_longer and changed the column titles to be “audio features,” and created another column titled “value.” This created two additional observations for each song in order to indicate each measure of audio features under the column “audio feature,” followed by a column of values.</p>
+<p>#2.) Joining/Merging</p>
+<pre class="r"><code>bind_rows(bey,sol)-&gt;beysol
+beysol%&gt;%select(artist,album,track,danceability,energy,valence)</code></pre>
+<pre><code>##     artist    album                                  track danceability energy
+## 1  Beyoncé Lemonade                      Pray You Catch Me        0.250  0.215
+## 2  Beyoncé Lemonade                                Hold Up        0.524  0.397
+## 3  Beyoncé Lemonade Don&#39;t Hurt Yourself (feat. Jack White)        0.614  0.686
+## 4  Beyoncé Lemonade                                  Sorry        0.775  0.598
+## 5  Beyoncé Lemonade              6 Inch (feat. The Weeknd)        0.516  0.637
+## 6  Beyoncé Lemonade                          Daddy Lessons        0.643  0.503
+## 7  Beyoncé Lemonade                           Love Drought        0.455  0.535
+## 8  Beyoncé Lemonade                            Sandcastles        0.330  0.357
+## 9  Beyoncé Lemonade            Forward (feat. James Blake)        0.387  0.133
+## 10 Beyoncé Lemonade         Freedom (feat. Kendrick Lamar)        0.437  0.803
+## 11 Beyoncé Lemonade                              All Night        0.574  0.573
+## 12 Beyoncé Lemonade                              Formation        0.896  0.621
+## 13 Beyoncé Lemonade                  Sorry - Original Demo        0.546  0.260
+## 14 Beyoncé        4                            Love On Top        0.652  0.748
+## 15 Beyoncé        4               Party (feat. André 3000)        0.648  0.593
+## 16 Beyoncé        4                         Schoolin&#39; Life        0.799  0.715
+##    valence
+## 1   0.0746
+## 2   0.5520
+## 3   0.6450
+## 4   0.3560
+## 5   0.3240
+## 6   0.5980
+## 7   0.2160
+## 8   0.1010
+## 9   0.0498
+## 10  0.4060
+## 11  0.6260
+## 12  0.8180
+## 13  0.4210
+## 14  0.6520
+## 15  0.7120
+## 16  0.5510
+##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 130 rows ]</code></pre>
+<pre class="r"><code>beysol-&gt;newofficialbeysol
+newofficialbeysol-&gt;beysol</code></pre>
+<p>Disclaimer: I was told in office hours (by the professor himself) on February 27th that because I went through the hassle of figuring out Spotify’s API- I could just use “bind_rows” to join my data. I am using this join because it was recommended to me by the professor. No cases were dropped as data was provided for all observations.</p>
+<p>#3.) Wrangling</p>
+<pre class="r"><code>#filter(), arrange()
+##Top Five Energetic songs of Beyoncé and Solange
+
+###1)
+beysol%&gt;%filter(artist==&quot;Beyoncé&quot;)%&gt;%arrange(desc(energy))%&gt;%slice(1:5)</code></pre>
+<pre><code>##    artist               album                 track danceability energy valence
+## 1 Beyoncé               B&#39;Day             Suga Mama        0.682  0.939   0.615
+## 2 Beyoncé                   4 Run the World (Girls)        0.733  0.899   0.760
+## 3 Beyoncé                   4                I Care        0.371  0.840   0.228
+## 4 Beyoncé               B&#39;Day         Get Me Bodied        0.865  0.829   0.651
+## 5 Beyoncé I AM...SASHA FIERCE          Sweet Dreams        0.694  0.825   0.788</code></pre>
+<pre class="r"><code>###2)
+beysol%&gt;%filter(artist==&quot;Solange&quot;)%&gt;%arrange(desc(energy))%&gt;%slice(1:5)</code></pre>
+<pre><code>##    artist     album                     track danceability energy valence
+## 1 Solange Solo Star            Dance with You        0.696  0.925   0.862
+## 2 Solange Solo Star          Bring It on Home        0.744  0.807   0.602
+## 3 Solange      True                Losing You        0.735  0.798   0.464
+## 4 Solange Solo Star                     Crush        0.710  0.797   0.774
+## 5 Solange Solo Star Crush - Vibelicious Remix        0.766  0.739   0.693</code></pre>
+<pre class="r"><code>#mutate(), group_by()
+##Average Audio Track Feature
+
+###3)
+beysol%&gt;%group_by(track)%&gt;%mutate(average=mean((energy+valence+danceability)/3))%&gt;%arrange(desc(average))-&gt;avg
+avg%&gt;%select(artist,album,track,average)-&gt;avg1
+avg1</code></pre>
+<pre><code>## # A tibble: 146 x 4
+## # Groups:   track [146]
+##    artist  album           track                                         average
+##    &lt;chr&gt;   &lt;chr&gt;           &lt;chr&gt;                                           &lt;dbl&gt;
+##  1 Solange Solo Star       Dance with You                                  0.828
+##  2 Beyoncé Dangerously In… Work It Out                                     0.798
+##  3 Beyoncé 4               Run the World (Girls)                           0.797
+##  4 Beyoncé B&#39;Day           Check On It (feat. Bun B &amp; Slim Thug) - feat…   0.788
+##  5 Beyoncé Dangerously In… Hip Hop Star (feat. Big Boi &amp; Sleepy Brown)     0.786
+##  6 Beyoncé B&#39;Day           Get Me Bodied                                   0.782
+##  7 Beyoncé Lemonade        Formation                                       0.778
+##  8 Beyoncé B&#39;Day           Get Me Bodied - Extended Mix                    0.776
+##  9 Beyoncé 4               Run the World (Girls) - Kaskade Club Remix      0.771
+## 10 Beyoncé 4               End of Time                                     0.769
+## # … with 136 more rows</code></pre>
+<pre class="r"><code>#select() 
+
+##4) extrapolating &quot;Lemonade&quot;                                               
+beysol%&gt;%filter(album==&quot;Lemonade&quot;)%&gt;%select(-artist,-danceability,-energy)-&gt;lemonade
+lemonade</code></pre>
+<pre><code>##       album                                  track valence
+## 1  Lemonade                      Pray You Catch Me  0.0746
+## 2  Lemonade                                Hold Up  0.5520
+## 3  Lemonade Don&#39;t Hurt Yourself (feat. Jack White)  0.6450
+## 4  Lemonade                                  Sorry  0.3560
+## 5  Lemonade              6 Inch (feat. The Weeknd)  0.3240
+## 6  Lemonade                          Daddy Lessons  0.5980
+## 7  Lemonade                           Love Drought  0.2160
+## 8  Lemonade                            Sandcastles  0.1010
+## 9  Lemonade            Forward (feat. James Blake)  0.0498
+## 10 Lemonade         Freedom (feat. Kendrick Lamar)  0.4060
+## 11 Lemonade                              All Night  0.6260
+## 12 Lemonade                              Formation  0.8180
+## 13 Lemonade                  Sorry - Original Demo  0.4210</code></pre>
+<pre class="r"><code>##5) extrapolating &quot;When I Get Home&quot;
+beysol%&gt;%filter(album==&quot;When I Get Home&quot;)%&gt;%select(-artist,-danceability,-energy)-&gt;whenigethome
+whenigethome</code></pre>
+<pre><code>##              album                                   track valence
+## 1  When I Get Home                       Things I Imagined  0.0390
+## 2  When I Get Home                  S McGregor (interlude)  0.3610
+## 3  When I Get Home                    Down With the Clique  0.3560
+## 4  When I Get Home                         Way to the Show  0.5580
+## 5  When I Get Home          Can I Hold the Mic (interlude)  0.5340
+## 6  When I Get Home                                Stay Flo  0.6740
+## 7  When I Get Home                                  Dreams  0.2110
+## 8  When I Get Home   Nothing Without Intention (interlude)  0.6230
+## 9  When I Get Home                                  Almeda  0.0631
+## 10 When I Get Home                               Time (is)  0.3800
+## 11 When I Get Home                         My Skin My Logo  0.5240
+## 12 When I Get Home We Deal With the Freak&#39;n (intermission)  0.5450
+## 13 When I Get Home                                  Jerrod  0.2180
+## 14 When I Get Home                                    Binz  0.4560
+## 15 When I Get Home                                 Beltway  0.0391
+## 16 When I Get Home                  Exit Scott (interlude)  0.5250
+## 17 When I Get Home                           Sound of Rain  0.4540
+## 18 When I Get Home                Not Screwed! (interlude)  0.1660
+## 19 When I Get Home                           I&#39;m a Witness  0.0383</code></pre>
+<pre class="r"><code>#summarize()
+
+##Summarizing (finding the mean of) the audio features
+
+###6) For both sisters
+beysol%&gt;%summarize(mean(danceability),mean(energy),mean(valence))-&gt;meanaudiofeatures
+meanaudiofeatures</code></pre>
+<pre><code>##   mean(danceability) mean(energy) mean(valence)
+## 1          0.6202603    0.5403007     0.5012116</code></pre>
+<pre class="r"><code>##Summarizing the mean for each artist
+
+###7) Beyoncé
+beysol%&gt;%filter(artist==&quot;Beyoncé&quot;)%&gt;%summarize(mean(danceability),mean(energy),mean(valence))</code></pre>
+<pre><code>##   mean(danceability) mean(energy) mean(valence)
+## 1          0.5972716     0.576821     0.4898691</code></pre>
+<pre class="r"><code>###8) Solange
+beysol%&gt;%filter(artist==&quot;Solange&quot;)%&gt;%summarize(mean(danceability),mean(energy),mean(valence))</code></pre>
+<pre><code>##   mean(danceability) mean(energy) mean(valence)
+## 1          0.6489077    0.4947908     0.5153462</code></pre>
+<pre class="r"><code>##summarizing mean for each recent album
+
+###9.) Lemonade
+beysol%&gt;%filter(album==&quot;Lemonade&quot;)%&gt;%summarize(mean(danceability),mean(energy),mean(valence))</code></pre>
+<pre><code>##   mean(danceability) mean(energy) mean(valence)
+## 1          0.5343846        0.486     0.3990308</code></pre>
+<pre class="r"><code>###10.) When I Get Home
+beysol%&gt;%filter(album==&quot;When I Get Home&quot;)%&gt;%summarize(mean(danceability),mean(energy),mean(valence))</code></pre>
+<pre><code>##   mean(danceability) mean(energy) mean(valence)
+## 1          0.5648421    0.4074737     0.3560263</code></pre>
+<p>With my dataset, I wanted to see the top five most energetic songs of Beyoncé and Solange, respectively (#1 &amp; #2). Using “filter,” I was able to pick out Beyoncé’s music, and by using “arrange,” I was able to sort her songs by descending energy. Beyonce’s most energentic song is “Suga Mama,” with an energy level of 0.939 out of 1.0. Solange’s most energetic song is “Dance With You,” with an energy level of 0.925. Since energy, valence, and danceability all range from 0-1 and all of their higher levels indicate more positive, upbeat, and danceable songs, I decided to average the three numeric variables (#6) for every song to get the “Average Audio Feature Level,” ranging from 0.0-1.0 (by using “mutate()”). The closer an average is to 1.0, the more upbeat, danceable, and positive a song is. The song with the highest average audio features turned out to be the song “Dance With You” by Solange at 0.827.</p>
+<p>For my visualizations, I wanted to be able to measure the valence of Beyoncé and Solange’s most recent albums by song. I was able to do this by using “select.” Visualization from this is in the second gg plot under #4. Last but not least, I found the mean danceability, energy, and valence, respectively, for both sisters, each sister, and of each sister’s most recent album. Their joint means ranged from 0.50-0.62. Beyoncé’s music is more energetic but less “danceable” and “happier” (valence) than Solange’s, and Beyoncé’s album, “Lemonade,” has more energy and valence than Solange’s most recent album, “When I Get Home” (which makes sense because “Lemonade”&quot; was really just one big slap in the face to Jay-Z).</p>
+<p>#4) Visualizing</p>
+<pre class="r"><code>#Correlation Heat Map of numeric variables (danceability, energy, valence)
+beysol&lt;-read.csv(&quot;beysol.csv&quot;)
+beysol%&gt;%select_if(is.numeric)%&gt;%cor%&gt;%as.data.frame%&gt;%
+rownames_to_column%&gt;%pivot_longer(-1)%&gt;%
+ggplot(aes(rowname,name,fill=value))+geom_tile()+scale_fill_gradient2(low=&quot;#CC0033&quot;, mid=&quot;#FF9966&quot;,high=&quot;#FFFF99&quot;)+
+geom_text(aes(label=round(value,2)))+
+xlab(&quot;&quot;)+ylab(&quot;&quot;)+ggtitle(&quot;Correlation Heat Map!&quot;)</code></pre>
+<p><img src="/Project1gbm_files/figure-html/unnamed-chunk-4-1.png" width="672" style="display: block; margin: auto;" />
+For my correlation heat map, it appears that valence and danceability are more correlated (0.5) than valence and energy (0.34), and danceability and energy (0.27).</p>
+<pre class="r"><code>#GG PLOT (1/2)
+ggplot(beysol,aes(x=artist,y=danceability,fill=album))+geom_bar(stat=&quot;summary&quot;,fun.y=&quot;mean&quot;,position=&quot;dodge&quot;)+geom_errorbar(stat=&quot;summary&quot;,position=&quot;dodge&quot;)+scale_y_continuous(breaks=seq(0,.8,.05))+ggtitle(&quot;DANCEABILITY&quot;)+xlab(&quot;Artist&quot;)+ylab(&quot;Danceability (by Album)&quot;)</code></pre>
+<p><img src="/Project1gbm_files/figure-html/unnamed-chunk-5-1.png" width="672" style="display: block; margin: auto;" />
+In my first GG plot, I calculated danceability by each artist, looking at each sisters’ respective discographies. Beyonce’s earliest albums, “Dangerously in Love” and “B’Day” had the highest danceability levels (.63 and .66, respectively), with “Lemonade” having the lowest danceability at 0.52. For Solange, her earliest albums, “Solo Star” and “True” also had the highest danceability levels (.69 and .72, respectively), with her later albums also having lower danceability levels.</p>
+<pre class="r"><code>#GG PLOT (2/2)
+
+bind_rows(lemonade,whenigethome)-&gt;recentalbums
+ggplot(recentalbums,aes(x=reorder(track,valence),y=valence,fill=track))+geom_bar(stat=&quot;summary&quot;, fun.y=&quot;mean&quot;,position=&quot;dodge&quot;)+facet_grid(album~.,scales=&quot;free_y&quot;)+coord_flip()+theme(legend.position = &quot;none&quot;)+ggtitle(&quot;Valence of Most Recent Albums (by Song)&quot;)+xlab(&quot;Songs&quot;)+ylab(&quot;Valence&quot;)</code></pre>
+<p><img src="/Project1gbm_files/figure-html/unnamed-chunk-6-1.png" width="672" style="display: block; margin: auto;" />
+For my second GG plot, I measured the valence of each song off of Beyonce and Solange’s most recent solo albums (extracting this information seen in #’s 4-5 of 3.) Wrangling). The song “Formation” off of “Lemonade”&quot; is deemed as the “happiest song” with a valence of 0.81. The song “Stay Flo” (also my top played song on Spotify in 2019) off of “When I Get Home” is deemed as the happiest song, with a valence of 0.6740.</p>
+<p>#5) Dimensionality Reduction</p>
+<pre class="r"><code>library(cluster)
+#1.) Process Data
+beysolnum&lt;-beysol%&gt;%select(-artist,-album,-track)
+
+#2.) Choose # of Clusters
+sil_width&lt;-vector()
+for(i in 2:10){
+  kms&lt;-kmeans(beysolnum,centers=i)
+  sil&lt;-silhouette(kms$cluster,dist(beysolnum))
+  sil_width[i]&lt;-mean(sil[,3])
+}
+ggplot()+geom_line(aes(x=1:10,y=sil_width))+scale_x_continuous(name=&quot;k&quot;,breaks=1:10)</code></pre>
+<p><img src="/Project1gbm_files/figure-html/unnamed-chunk-7-1.png" width="672" style="display: block; margin: auto;" /></p>
+<pre class="r"><code>#3.) Run Cluster Analysis (k-means)
+kmeans&lt;-beysolnum%&gt;%scale%&gt;%kmeans(2)
+kmeans</code></pre>
+<pre><code>## K-means clustering with 2 clusters of sizes 53, 93
+## 
+## Cluster means:
+##            X danceability     energy    valence
+## 1 -0.3901571   -1.0024506 -0.4862761 -0.8795945
+## 2  0.2223476    0.5712891  0.2771251  0.5012743
+## 
+## Clustering vector:
+##   [1] 1 1 2 2 1 2 1 1 1 1 2 2 1 2 2 2 2 2 2 1 2 1 2 2 1 1 1 2 2 2 2 1 1 1 1 1 1
+##  [38] 1 1 1 1 2 2 2 2 1 1 1 2 2 2 2 1 1 2 2 2 2 1 2 1 2 2 2 2 2 2 2 2 2 2 1 1 2
+##  [75] 1 1 1 1 1 2 2 1 1 2 2 1 2 1 2 2 1 2 2 1 2 1 1 2 1 1
+##  [ reached getOption(&quot;max.print&quot;) -- omitted 46 entries ]
+## 
+## Within cluster sum of squares by cluster:
+## [1] 134.7892 264.8837
+##  (between_SS / total_SS =  31.1 %)
+## 
+## Available components:
+## 
+## [1] &quot;cluster&quot;      &quot;centers&quot;      &quot;totss&quot;        &quot;withinss&quot;     &quot;tot.withinss&quot;
+## [6] &quot;betweenss&quot;    &quot;size&quot;         &quot;iter&quot;         &quot;ifault&quot;</code></pre>
+<pre class="r"><code>#4.) Interpret Clusters
+final&lt;-beysol%&gt;%mutate(cluster=as.factor(kmeans$cluster))%&gt;%select(-artist,-album,-track)
+final</code></pre>
+<pre><code>##     X danceability energy valence cluster
+## 1   1        0.250  0.215  0.0746       1
+## 2   2        0.524  0.397  0.5520       1
+## 3   3        0.614  0.686  0.6450       2
+## 4   4        0.775  0.598  0.3560       2
+## 5   5        0.516  0.637  0.3240       1
+## 6   6        0.643  0.503  0.5980       2
+## 7   7        0.455  0.535  0.2160       1
+## 8   8        0.330  0.357  0.1010       1
+## 9   9        0.387  0.133  0.0498       1
+## 10 10        0.437  0.803  0.4060       1
+## 11 11        0.574  0.573  0.6260       2
+## 12 12        0.896  0.621  0.8180       2
+## 13 13        0.546  0.260  0.4210       1
+## 14 14        0.652  0.748  0.6520       2
+## 15 15        0.648  0.593  0.7120       2
+## 16 16        0.799  0.715  0.5510       2
+## 17 17        0.665  0.787  0.6990       2
+## 18 18        0.718  0.523  0.8350       2
+## 19 19        0.616  0.780  0.4710       2
+## 20 20        0.371  0.840  0.2280       1
+##  [ reached &#39;max&#39; / getOption(&quot;max.print&quot;) -- omitted 126 rows ]</code></pre>
+<pre class="r"><code>confmat&lt;-final%&gt;%group_by(valence,danceability)%&gt;%count(cluster)%&gt;%arrange(desc(n))%&gt;%pivot_wider(names_from=&quot;cluster&quot;,values_from=&quot;n&quot;,values_fill=list(&#39;n&#39;=0))
+confmat</code></pre>
+<pre><code>## # A tibble: 144 x 4
+## # Groups:   valence, danceability [144]
+##    valence danceability   `2`   `1`
+##      &lt;dbl&gt;        &lt;dbl&gt; &lt;int&gt; &lt;int&gt;
+##  1  0.466         0.75      2     0
+##  2  0.719         0.696     2     0
+##  3  0.0383        0.26      0     1
+##  4  0.039         0.391     0     1
+##  5  0.0391        0.313     0     1
+##  6  0.0498        0.387     0     1
+##  7  0.0631        0.827     1     0
+##  8  0.0746        0.25      0     1
+##  9  0.101         0.33      0     1
+## 10  0.102         0.549     0     1
+## # … with 134 more rows</code></pre>
+<pre class="r"><code>#5.) Visualize Clusters
+library(GGally)
+ggplot(final,aes(x=valence,y=danceability,color=cluster))+geom_point()+scale_y_continuous(breaks=seq(0,1,.1))+scale_x_continuous(breaks=seq(0,1,.1))+ggtitle(&quot;Clustering!&quot;)</code></pre>
+<p><img src="/Project1gbm_files/figure-html/unnamed-chunk-7-2.png" width="672" style="display: block; margin: auto;" />
+I ran a cluster analysis (kmeans) of my data, consisting of 146 points for every song of Beyoncé and Solange in my dataset. As a result of my calculations (#2), I decided to analyze my data with 2 clusters. Since valence and danceability are the numeric variables that correlate the highest (0.50), I decided to run my clusters based on these two numeric variables. Cluster 1 (n=91) consists of songs that are low to middle (0- 0.7) in valence and danceability, while Cluster 2 (n=55) consists of songs that are higher in danceability and valence. There is one outlier in cluster 2 (valence=.065, danceability=.83). Considering that each and every song, whether its performed by Beyoncé or Solange, has its own unique danceability, valence, and energy level ranging from 0.0-1.0, down to the ten-thousandths, it is understandable as to why my datapoints are not as stable, thus appearing to be spaced out.</p>
+</div>

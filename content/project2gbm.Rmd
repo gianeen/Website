@@ -1,0 +1,272 @@
+---
+title: "Project 2"
+author: "by Gianeen Magno"
+output: pdf_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+**Just running some libraries**
+```{R}
+library(vegan)
+library(zoo)
+library(lmtest)
+library(tidyverse)
+library(plotROC)
+library(pROC)
+library(glmnet)
+library(dplyr)
+library(sandwich)
+```
+## 0.)
+- The dataset that I have chosen is my dataset from Project 1, which consists of Beyoncé and Solange Knowles' discographies that are on Spotify. My **categorical variables** are the artists' names, album names, and track names. In terms of the albums used, for Beyoncé, I analyzed the albums "Lemonade," "4," "I AM... SASHA FIERCE," "B'Day," and "Dangerously in Love." I would have included her self-titled album, but that data was unfortunately unavailable. For Solange, I analyzed the albums "When I Get Home," "A Seat at the Table," "True," and "Solo Star." My **numeric variables** are "danceability," "energy," and "valence," which are three of several features that Spotify uses to develop music suggestions based on users' listening histories. According to Spotify's Developer page, these numeric variables are "Audio Features" for a track, ranging in values from 0.00-1.00, with 1.00 being the highest. Based on their website, **"danceability"** describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. 0.00 is least danceable and 1.0 is the most danceable. **"Energy"** represents a perceptual measure of intensity and activity. Energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while a Bach prelude scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. **"Valence"** describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). After tidying my dataset, I ended up with **146 observations.**
+
+## 1.)
+- I performed a MANOVA testing to see if danceability and energy show a mean difference across Solange's albums. Our null hypothesis (Ho) is that for both descriptive variables (danceability, energy), the means for each of Solange's albums are equal. Our alternative hypothesis (Ha) is that for at least one descriptive variable, at least one album's mean is different. 
+```{R}
+beysol<-read.csv("beysol.csv")
+manovasol<-beysol%>%filter(artist=="Solange")%>%select(artist,album,danceability,energy)
+man1<-manova(cbind(danceability,energy)~album,data=manovasol)
+summary(man1)
+```
+- After running a MANOVA, it appears that there is a mean difference across levels of Solange's albums (p-value=2.423e-05). Thus, a univariate ANOVA will be performed to find responses showing a mean difference across groups. 
+```{R}
+summary.aov(man1)
+```
+- After running a univariate ANOVA, it appears that energy and danceability are both significant (p-value danceability=0.008241, p-value energy=1.095e-05). Thus, for energy and danceability, at least one Solange album differs! 
+
+- Post-hoc t-tests were performed to see which groups differ (by descriptive variable):
+```{R}
+pairwise.t.test(manovasol$energy,manovasol$album,adj="none")
+pairwise.t.test(manovasol$danceability,manovasol$album,p.adj="none")
+```
+- Fifteen hypothesis tests were performed, so the probability of at least one type I error is 1-.95^15 = 0.537.
+- When the significance level was adjusted accordingly by using Bonferroni correction, everything was still significant (alpha=0.5/15=0.0333).
+- As mentioned earlier, the null hypothesis (Ho) is that for both descriptive variables (danceability, energy), the means for each of Solange's albums are equal. Our alternative hypothesis (Ha) is that for at least one descriptive variable, at least one album's mean is different. Based on these tests, it appears that the results are significant and we reject the null and accept the alternative hypothesis. 
+
+## 2.) 
+- A randomization test was performed in the form of a PERMANOVA to see if the artists themselves (to be more specific, their artistry) affected their danceability and energy. The null hypothesis is that the artists' respective artistries have no effect on their tracks' danceabilities and energies. The alternative hypothesis is that the artists' respective artistries have an effect on their tracks' danceabilities and energies. As seen when running the PERMANOVA using the "adonis()" function, the null hypothesis is rejected and artists have a significant effect on danceability and energy (p-value=0.008).
+```{R}
+#compute distances/dissimilarities
+dists<-beysol%>%select(danceability,energy)%>%dist()
+#perform PERMANOVA on distances/dissimilarities
+adonis(dists~artist,data=beysol)
+#Create a plot visualizing the null distribution and the test statistic (3). 
+beysol1<-beysol%>%group_by(artist)%>%select(danceability,energy)%>%mutate(meandanceability=mean(danceability),meanenergy=mean(energy))%>%ungroup()%>%mutate(Gmeandanceability=mean(danceability),Gmeanenergy=mean(energy))
+ggplot(beysol1,aes(danceability,energy,color=artist))+geom_point(aes(x=Gmeandanceability,y=Gmeanenergy),size=4,color="gray50")+geom_segment(aes(x=Gmeandanceability,y=Gmeanenergy,xend=danceability,yend=energy),color="gray50",lty=2)+geom_point()+geom_point(aes(x=meandanceability,y=meanenergy),size=4)+geom_segment(aes(x=meandanceability,y=meanenergy,xend=danceability,yend=energy))
+```
+
+## 3.)
+- A multiple linear regression model was built to predict if danceability and energy have a significant effect on the valence of a song. 
+```{R}
+#Centering the means 
+beysol$danceability_c<-beysol$danceability-mean(beysol$danceability)
+beysol$energy_c<-beysol$energy-mean(beysol$energy)
+fit<-lm(valence~danceability_c*energy_c,data=beysol)
+summary(fit)
+#Equation
+#Valence=0.50959+.0.59417(Danceability)+0.22995(Energy)-0.98045(Danceability*Energy)
+```
+- Predicted valence for average danceability and average energy is 0.50959. 
+- Controlling for energy, valence increases by 0.59417 on average for every 1-unit increase in danceability on average.
+- Controlling for danceability, valence increases by 0.22995 on average for every 1-unit increase in energy on average. 
+- The effect of danceability on energy decreases by 0.98045, on average, for every 1-unit increase in valence.
+
+- The regression model was plotted on two ggplots for each interaction.
+```{R}
+beysol%>%ggplot(aes(danceability,valence))+geom_point()+geom_smooth(method='lm',se=F)
+beysol%>%ggplot(aes(energy,valence))+geom_point()+geom_smooth(method='lm',se=F)
+```
+
+- Assumptions of linearity, normality, and homoskedasticity were checked for the linear regression model. 
+```{R}
+resids<-fit$residuals
+fitvals<-fit$fitted.values
+ggplot()+geom_point(aes(fitvals,resids))+geom_hline(yintercept=0,color="blue")
+shapiro.test(fit$residuals)
+```
+- Homoskedasticity, linearity - by observing the following ggplot, it appears that homoskedasticity and linearity is met.
+- Normality- Null hypothesis (Ho) is that the true distribution is normal. After running a Shapiro-Wilk test to test for normality, it appears that the null hypothesis fails to be rejected. Thus, the true distribution is normal. 
+```{R}
+coeftest(fit)
+coeftest(fit,vcov=vcovHC(fit))
+sum((fitvals-mean(beysol$valence))^2)/sum((beysol$valence-mean(beysol$valence))^2)
+```
+- After recomputing regression results with robust standard errors, the interaction between danceability and energy become significant on valence (normal-theory SEs p-value=0.067642, robust SEs p-value=0.03172). The other coefficients remain significant, but the coefficients decrease in p-value (danceability 7.261e-08 to 2.691e-08, energy 0.005658 to 0.00470). The proportion of the variation in the outcome is explained as 0.3092545 by the model. 
+
+## 4.) 
+```{R}
+boot_beysol<-sample_frac(beysol,replace=T)
+
+samp_distn<-replicate(5000, {
+  boot_beysol <- sample_frac(beysol, replace=T) 
+  fit<-lm(valence~danceability_c*energy_c,data=beysol) 
+  coef(fit) 
+})
+coeftest(fit)
+```
+- The same regression model was ran with bootstrapped standard errors. Compared to the original and robust standard errors ran, this model shares the same standard errors with the original standard errors and different standard errors with the robust standard errors.
+
+## 5.) 
+- A logistic regression was performed to predict the artist (Beyonce==1 or Solange==0) from the all outcome variables valence, danceability, and energy.
+```{R}
+data<-beysol%>%mutate(binary0=ifelse(artist=="Beyoncé",1,0))
+data$binary0<-factor(data$binary0,levels=c("1","0"))
+fit2<-glm(binary0~valence+danceability+energy,data=data,family="binomial")
+coeftest(fit2)
+exp(coef(fit2))
+```
+**(Intercept)**
+- (Intercept): Controlling for valence, danceability, and energy, the odds of a song to likely be Beyonce's in this dataset is 0.506.
+
+**Valence**
+- Controlling for danceability and energy, for every 1-unit increase in valence, the odds of a song being a song by Beyoncé increases by a factor or 1.52919972 (not significant).
+
+**Dancebility**
+- Controlling for energy and valence, for every 1-unit increase in danceability, the odds of a song being a song by Beyoncé increases by 21.15431343 (significant).
+
+**Energy** 
+- Controlling for valence and danceability, for every 1-unit increase in energy, the odds of a song being a song by Beyoncé increases by 0.04603939 (significant). 
+
+- A confusion matrix was performed to further determine Accuracy, Sensitivity (TPR), Specificity (TNR), and Precision (PPV). 
+```{R}
+prob<-predict(fit2,type="response")
+pred<-ifelse(prob>.5,1,0)  
+table(prediction=pred,truth=beysol$artist)%>%addmargins
+```
+**Accuracy:**
+```{R}
+(20+35)/146
+```
+-The accuracy of this model is 0.377, or 37.7%.
+
+**Sensitivity (TPR)**
+```{R}
+20/81
+```
+-The probability of correctly determining that a song is by Beyoncé is 0.247, or 24.7%.
+
+**Specificity (TNR)**
+```{R}
+35/65
+```
+- The probability of correctly determining that a song is by Solange is 0.538, or 53.8%.
+
+**Precision (PPV)**
+```{R}
+30/50
+```
+- The proportion of songs that are of Beyoncé that are actually sung by Beyonce is 0.6, or 60%.
+
+**Density plot of log-odds (logit) by binary outcome variable:**
+```{R}
+data$logit<-predict(fit2,type="link")
+data%>%ggplot()+geom_density(aes(logit,color=artist,fill=artist), alpha=.4)+
+  theme(legend.position=c(.85,.85))+geom_vline(xintercept=0)+xlab("logit (log-odds)")+
+  geom_rug(aes(logit,color=artist))+
+  geom_text(x=.85,y=.2,label="TN = 35")+
+  geom_text(x=-.5,y=.17,label="FP=30")+
+  geom_text(x=.3,y=.1,label="FN=61")+
+  geom_text(x=-.95,y=.35,label="TP = 20")
+```
+
+- An ROC curve was generated and the area under the curve was further calculated for each explanatory variable. 
+```{R}
+library(plotROC)
+data$binary<-ifelse(beysol$artist=="Beyoncé",1,0)
+ROCplotdance<-ggplot(data)+geom_roc(aes(d=binary,m=danceability),n.cuts=0)
+ROCplotdance
+calc_auc(ROCplotdance)
+
+ROCplotvalence<-ggplot(data)+geom_roc(aes(d=binary,m=valence),n.cuts=0)
+ROCplotvalence
+calc_auc(ROCplotvalence)
+
+ROCplotenergy<-ggplot(data)+geom_roc(aes(d=binary,m=energy),n.cuts=0)
+ROCplotenergy
+calc_auc(ROCplotenergy)
+```
+
+- A repeated-random sub-sampling cross validation was performed.
+```{R}
+#creating  class diag function
+class_diag <- function(probs,truth){
+#CONFUSION MATRIX: CALCULATE ACCURACY, TPR, TNR, PPV
+tab<-table(factor(probs>.5,levels=c("FALSE","TRUE")),truth)
+acc=sum(diag(tab))/sum(tab)
+sens=tab[2,2]/colSums(tab)[2]
+spec=tab[1,1]/colSums(tab)[1]
+ppv=tab[2,2]/rowSums(tab)[2]
+if(is.numeric(truth)==FALSE & is.logical(truth)==FALSE) truth<-as.numeric(truth)-1
+#CALCULATE EXACT AUC
+ord<-order(probs, decreasing=TRUE)
+probs <- probs[ord]; truth <- truth[ord]
+TPR=cumsum(truth)/max(1,sum(truth))
+FPR=cumsum(!truth)/max(1,sum(!truth))
+dup<-c(probs[-1]>=probs[-length(probs)], FALSE)
+TPR<-c(0,TPR[!dup],1); FPR<-c(0,FPR[!dup],1)
+n <- length(TPR)
+auc<- sum( ((TPR[-1]+TPR[-n])/2) * (FPR[-1]-FPR[-n]) )
+data.frame(acc,sens,spec,ppv,auc)
+} 
+
+set.seed(1234)
+fraction<-0.5 #choose proportion of rows to train
+train_n<-floor(fraction*nrow(data)) #number of rows to train
+iter<-500 #number of iterations
+diags<-NULL
+for(i in 1:iter){
+## Create training and test sets
+train_index<-sample(1:nrow(data),size=train_n)
+train<-data[train_index,]
+test<-data[-train_index,]
+truth<-test$binary0
+## Train model on training set (random half of dataset)
+fit<-glm(binary0~danceability+energy+valence,data=train,family="binomial")
+## Test model on remaning half of dataset; get classification diagnostics
+probs<-predict(fit,newdata = test,type="response")
+diags<-rbind(diags,class_diag(probs,truth))
+}
+```
+
+- Average diagnostics are as follows:
+```{R}
+summarize_all(diags,mean)
+```
+
+## 6.)
+- A LASSO regression was ran to predict artist based on the rest of the explanatory variables. 
+```{R}
+beysol$binary<-ifelse(beysol$artist=="Beyoncé",1,0)
+y<-as.matrix(beysol$binary)
+x<-model.matrix(binary~energy+valence+danceability,data=beysol)[,-1]
+head(x)
+x<-scale(x)
+head(x)
+cv<-cv.glmnet(x,y)
+lasso<-glmnet(x,y,family="binomial",lambda=cv$lambda.1se)
+coef(lasso)
+```
+- The variables that are retained are energy and danceability.
+
+- A 10-fold cross validation was performed.
+```{R}
+set.seed(1234)
+k=10
+data <- beysol %>% sample_frac 
+folds <- ntile(1:nrow(data),n=10) 
+diags<-NULL
+for(i in 1:k){
+train <- data[folds!=i,] 
+test <- data[folds==i,] 
+truth <- test$binary 
+fit <- glm(binary~energy+danceability+valence,
+data=train, family="binomial")
+probs <- predict(fit, newdata=test, type="response")
+diags<-rbind(diags,class_diag(probs,truth))
+}
+diags%>%summarize_all(mean)
+```
+- The auc of this model is 0.685, which is the exact AUC of the model in part 5.

@@ -1,0 +1,147 @@
+"","artist","album","track","danceability","energy","valence"
+"1","Beyoncé","Lemonade","Pray You Catch Me",0.25,0.215,0.0746
+"2","Beyoncé","Lemonade","Hold Up",0.524,0.397,0.552
+"3","Beyoncé","Lemonade","Don't Hurt Yourself (feat. Jack White)",0.614,0.686,0.645
+"4","Beyoncé","Lemonade","Sorry",0.775,0.598,0.356
+"5","Beyoncé","Lemonade","6 Inch (feat. The Weeknd)",0.516,0.637,0.324
+"6","Beyoncé","Lemonade","Daddy Lessons",0.643,0.503,0.598
+"7","Beyoncé","Lemonade","Love Drought",0.455,0.535,0.216
+"8","Beyoncé","Lemonade","Sandcastles",0.33,0.357,0.101
+"9","Beyoncé","Lemonade","Forward (feat. James Blake)",0.387,0.133,0.0498
+"10","Beyoncé","Lemonade","Freedom (feat. Kendrick Lamar)",0.437,0.803,0.406
+"11","Beyoncé","Lemonade","All Night",0.574,0.573,0.626
+"12","Beyoncé","Lemonade","Formation",0.896,0.621,0.818
+"13","Beyoncé","Lemonade","Sorry - Original Demo",0.546,0.26,0.421
+"14","Beyoncé","4","Love On Top",0.652,0.748,0.652
+"15","Beyoncé","4","Party (feat. André 3000)",0.648,0.593,0.712
+"16","Beyoncé","4","Schoolin' Life",0.799,0.715,0.551
+"17","Beyoncé","4","Countdown",0.665,0.787,0.699
+"18","Beyoncé","4","I Miss You",0.718,0.523,0.835
+"19","Beyoncé","4","Dance for You",0.616,0.78,0.471
+"20","Beyoncé","4","I Care",0.371,0.84,0.228
+"21","Beyoncé","4","Rather Die Young",0.628,0.665,0.447
+"22","Beyoncé","4","1+1",0.303,0.384,0.261
+"23","Beyoncé","4","End of Time",0.711,0.811,0.785
+"24","Beyoncé","4","Run the World (Girls)",0.733,0.899,0.76
+"25","Beyoncé","4","Best Thing I Never Had",0.545,0.649,0.297
+"26","Beyoncé","4","Start Over",0.474,0.797,0.398
+"27","Beyoncé","4","I Was Here",0.51,0.627,0.234
+"28","Beyoncé","4","Lay Up Under Me",0.724,0.792,0.672
+"29","Beyoncé","4","Run the World (Girls) - Kaskade Club Remix",0.65,0.814,0.848
+"30","Beyoncé","4","Run the World (Girls) - RedTop Club Remix",0.728,0.821,0.698
+"31","Beyoncé","4","Run the World (Girls) - Jochen Simms Club Remix",0.806,0.774,0.358
+"32","Beyoncé","I AM...SASHA FIERCE","If I Were a Boy",0.632,0.518,0.427
+"33","Beyoncé","I AM...SASHA FIERCE","Halo",0.508,0.72,0.472
+"34","Beyoncé","I AM...SASHA FIERCE","Disappear",0.492,0.348,0.206
+"35","Beyoncé","I AM...SASHA FIERCE","Broken-Hearted Girl",0.336,0.424,0.159
+"36","Beyoncé","I AM...SASHA FIERCE","Ave Maria",0.35,0.403,0.201
+"37","Beyoncé","I AM...SASHA FIERCE","Smash Into You",0.572,0.429,0.103
+"38","Beyoncé","I AM...SASHA FIERCE","Satellites",0.384,0.153,0.282
+"39","Beyoncé","I AM...SASHA FIERCE","That's Why You're Beautiful",0.549,0.628,0.102
+"40","Beyoncé","I AM...SASHA FIERCE","Save The Hero",0.551,0.467,0.148
+"41","Beyoncé","I AM...SASHA FIERCE","Single Ladies (Put a Ring on It)",0.426,0.584,0.272
+"42","Beyoncé","I AM...SASHA FIERCE","Radio",0.605,0.763,0.553
+"43","Beyoncé","I AM...SASHA FIERCE","Diva",0.875,0.551,0.861
+"44","Beyoncé","I AM...SASHA FIERCE","Sweet Dreams",0.694,0.825,0.788
+"45","Beyoncé","I AM...SASHA FIERCE","Video Phone",0.479,0.763,0.608
+"46","Beyoncé","I AM...SASHA FIERCE","Hello",0.33,0.769,0.416
+"47","Beyoncé","I AM...SASHA FIERCE","Ego",0.623,0.389,0.489
+"48","Beyoncé","I AM...SASHA FIERCE","Scared of Lonely",0.534,0.575,0.205
+"49","Beyoncé","I AM...SASHA FIERCE","Why Don't You Love Me",0.693,0.73,0.741
+"50","Beyoncé","B'Day","Deja Vu (feat. Jay-Z)",0.763,0.728,0.362
+"51","Beyoncé","B'Day","Get Me Bodied",0.865,0.829,0.651
+"52","Beyoncé","B'Day","Suga Mama",0.682,0.939,0.615
+"53","Beyoncé","B'Day","Upgrade U (feat. Jay-Z)",0.474,0.683,0.509
+"54","Beyoncé","B'Day","Ring The Alarm",0.456,0.742,0.428
+"55","Beyoncé","B'Day","Kitty Kat",0.81,0.386,0.506
+"56","Beyoncé","B'Day","Freakum Dress",0.683,0.703,0.378
+"57","Beyoncé","B'Day","Green Light",0.796,0.568,0.729
+"58","Beyoncé","B'Day","Irreplaceable",0.576,0.697,0.501
+"59","Beyoncé","B'Day","Resentment",0.378,0.565,0.482
+"60","Beyoncé","B'Day","Encore For The Fans",0.706,0.0193,0.68
+"61","Beyoncé","B'Day","Listen (From the Motion Picture ""Dreamgirls"")",0.483,0.59,0.202
+"62","Beyoncé","B'Day","Get Me Bodied - Extended Mix",0.911,0.727,0.69
+"63","Beyoncé","B'Day","Check On It (feat. Bun B & Slim Thug) - feat. Bun B and Slim Thug",0.705,0.796,0.864
+"64","Beyoncé","B'Day","Deja Vu (feat. Jay-Z) - The Remix",0.655,0.642,0.405
+"65","Beyoncé","Dangerously In Love","Crazy In Love (feat. Jay-Z)",0.646,0.77,0.681
+"66","Beyoncé","Dangerously In Love","Naughty Girl",0.588,0.461,0.659
+"67","Beyoncé","Dangerously In Love","Baby Boy (feat. Sean Paul)",0.655,0.488,0.791
+"68","Beyoncé","Dangerously In Love","Hip Hop Star (feat. Big Boi & Sleepy Brown)",0.736,0.651,0.971
+"69","Beyoncé","Dangerously In Love","Be With You",0.711,0.454,0.782
+"70","Beyoncé","Dangerously In Love","Me, Myself and I",0.75,0.458,0.536
+"71","Beyoncé","Dangerously In Love","Yes",0.662,0.374,0.551
+"72","Beyoncé","Dangerously In Love","Signs (feat. Missy Elliott)",0.447,0.395,0.411
+"73","Beyoncé","Dangerously In Love","Speechless",0.568,0.282,0.103
+"74","Beyoncé","Dangerously In Love","That's How You Like It (feat. Jay-Z)",0.493,0.527,0.697
+"75","Beyoncé","Dangerously In Love","The Closer I Get to You (feat. Beyoncé Knowles)",0.652,0.292,0.304
+"76","Beyoncé","Dangerously In Love","Dangerously In Love",0.609,0.407,0.459
+"77","Beyoncé","Dangerously In Love","Beyoncé Interlude",0.65,0.0452,0.542
+"78","Beyoncé","Dangerously In Love","Gift from Virgo",0.388,0.265,0.32
+"79","Beyoncé","Dangerously In Love","Daddy",0.469,0.446,0.448
+"80","Beyoncé","Dangerously In Love","Work It Out",0.683,0.763,0.948
+"81","Beyoncé","Dangerously In Love","'03 Bonnie & Clyde (feat. Jay-Z)",0.868,0.654,0.348
+"82","Solange","When I Get Home","Things I Imagined",0.391,0.192,0.039
+"83","Solange","When I Get Home","S McGregor (interlude)",0.422,0.321,0.361
+"84","Solange","When I Get Home","Down With the Clique",0.664,0.459,0.356
+"85","Solange","When I Get Home","Way to the Show",0.594,0.71,0.558
+"86","Solange","When I Get Home","Can I Hold the Mic (interlude)",0.633,0.169,0.534
+"87","Solange","When I Get Home","Stay Flo",0.823,0.558,0.674
+"88","Solange","When I Get Home","Dreams",0.661,0.368,0.211
+"89","Solange","When I Get Home","Nothing Without Intention (interlude)",0.678,0.506,0.623
+"90","Solange","When I Get Home","Almeda",0.827,0.553,0.0631
+"91","Solange","When I Get Home","Time (is)",0.493,0.159,0.38
+"92","Solange","When I Get Home","My Skin My Logo",0.724,0.292,0.524
+"93","Solange","When I Get Home","We Deal With the Freak'n (intermission)",0.447,0.7,0.545
+"94","Solange","When I Get Home","Jerrod",0.409,0.253,0.218
+"95","Solange","When I Get Home","Binz",0.863,0.625,0.456
+"96","Solange","When I Get Home","Beltway",0.313,0.189,0.0391
+"97","Solange","When I Get Home","Exit Scott (interlude)",0.39,0.436,0.525
+"98","Solange","When I Get Home","Sound of Rain",0.8,0.526,0.454
+"99","Solange","When I Get Home","Not Screwed! (interlude)",0.34,0.436,0.166
+"100","Solange","When I Get Home","I'm a Witness",0.26,0.29,0.0383
+"101","Solange","A Seat at the Table","Rise",0.507,0.418,0.24
+"102","Solange","A Seat at the Table","Weary",0.507,0.466,0.11
+"103","Solange","A Seat at the Table","Interlude: The Glory is in You",0.538,0.259,0.827
+"104","Solange","A Seat at the Table","Cranes in the Sky",0.719,0.615,0.465
+"105","Solange","A Seat at the Table","Interlude: Dad Was Mad",0.631,0.314,0.66
+"106","Solange","A Seat at the Table","Mad",0.827,0.477,0.599
+"107","Solange","A Seat at the Table","Don't You Wait",0.833,0.579,0.514
+"108","Solange","A Seat at the Table","Interlude: Tina Taught Me",0.733,0.312,0.405
+"109","Solange","A Seat at the Table","Don't Touch My Hair",0.823,0.411,0.397
+"110","Solange","A Seat at the Table","Interlude: This Moment",0.318,0.658,0.65
+"111","Solange","A Seat at the Table","Where Do We Go",0.85,0.351,0.412
+"112","Solange","A Seat at the Table","Interlude: For Us By Us",0.552,0.576,0.865
+"113","Solange","A Seat at the Table","F.U.B.U.",0.475,0.499,0.454
+"114","Solange","A Seat at the Table","Borderline (An Ode to Self Care)",0.69,0.577,0.472
+"115","Solange","A Seat at the Table","Interlude: I Got So Much Magic, You Can Have It",0.652,0.0584,0.639
+"116","Solange","A Seat at the Table","Junie",0.826,0.724,0.652
+"117","Solange","A Seat at the Table","Interlude: No Limits",0.483,0.376,0.887
+"118","Solange","A Seat at the Table","Don't Wish Me Well",0.742,0.417,0.388
+"119","Solange","A Seat at the Table","Interlude: Pedestals",0.721,0.318,0.885
+"120","Solange","A Seat at the Table","Scales",0.459,0.366,0.255
+"121","Solange","A Seat at the Table","Closing: The Chosen Ones",0.402,0.502,0.612
+"122","Solange","True","Losing You",0.735,0.798,0.464
+"123","Solange","True","Some Things Never Seem to Fucking Work",0.432,0.65,0.535
+"124","Solange","True","Locked in Closets",0.808,0.625,0.397
+"125","Solange","True","Lovers in the Parking Lot",0.709,0.559,0.392
+"126","Solange","True","Don't Let Me Down",0.946,0.408,0.782
+"127","Solange","True","Look Good with Trouble",0.696,0.269,0.719
+"128","Solange","True","Bad Girls - Verdine Version",0.75,0.518,0.466
+"129","Solange","True","Some Things Never Seem To Fucking Work",0.777,0.653,0.559
+"130","Solange","True","Locked In Closets",0.802,0.633,0.393
+"131","Solange","True","Lovers In The Parking Lot",0.709,0.559,0.391
+"132","Solange","True","Looks Good With Trouble",0.698,0.263,0.739
+"133","Solange","True","Bad Girls (Verdine Version)",0.751,0.518,0.47
+"134","Solange","True","Look Good With Trouble",0.696,0.269,0.719
+"135","Solange","True","Bad Girls - Verdine version",0.75,0.518,0.466
+"136","Solange","Solo Star","Ain't No Way",0.79,0.675,0.733
+"137","Solange","Solo Star","Dance with You",0.696,0.925,0.862
+"138","Solange","Solo Star","Get Together",0.784,0.623,0.78
+"139","Solange","Solo Star","Crush",0.71,0.797,0.774
+"140","Solange","Solo Star","So Be It",0.664,0.647,0.609
+"141","Solange","Solo Star","Wonderland",0.703,0.616,0.597
+"142","Solange","Solo Star","This Could Be Love",0.645,0.722,0.719
+"143","Solange","Solo Star","Feelin' You",0.616,0.666,0.74
+"144","Solange","Solo Star","Bring It on Home",0.744,0.807,0.602
+"145","Solange","Solo Star","Feelin' You - Nu Soul Remix",0.782,0.689,0.744
+"146","Solange","Solo Star","Crush - Vibelicious Remix",0.766,0.739,0.693

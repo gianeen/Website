@@ -1,0 +1,184 @@
+---
+title: 'Project 1- Beyoncé vs Solange: Which Knowles Sister is More Likely to Make
+  You Get Up and Groove? by Gianeen Magno '
+output:
+  pdf_document: default
+  html_document: default
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE, eval = TRUE, fig.align = "center", warning = F, message = F,
+tidy=TRUE, tidy.opts=list(width.cutoff=60), R.options=list(max.print=100))
+```
+
+# 0.) Introduction
+
+The datasets that I have chosen are the audio features of Beyoncé Knowles and Solange Knowles' tracks that are available on Spotify, specifically, their solo discographies that are studio albums and non-special edition. This dataset was *tediously* acquired by installing the package "spotifyr" and utilizing "Spotify for Developers" on Spotify's website, as well as spending a/n (large) amount of time figuring out how to use Spotify's API. I mainly decided to do this because I've always wondered how Spotify develops music suggestions based on users' listening histories, and it was very interesting to see that there are so many components that goes behind a track in order to curate a playlist- from "Your Daily Mix" to "Discover Weekly." So, for this project, I will be looking at the audio track features that determine our music suggestions from Spotify, but will do so by comparing the sensational music careers of Beyoncé and Solange Knowles. Although they are sisters by blood, each artist is distinct and creative in their own unique ways. 
+
+In terms of the albums used, for Beyoncé, I analyzed the albums "Lemonade," "4," "I AM... SASHA FIERCE," "B'Day," and "Dangerously in Love." I would have included her self-titled album, but that data was unfortunately unavailable. For Solange, I analyzed the albums "When I Get Home," "A Seat at the Table," "True," and "Solo Star." 
+
+When creating a joint data set, the categorical variables I found it important to obtain are "artist," "album," "track," and my numeric variables consisting of "danceability," "energy," and "valence." According to Spotify's Developer page, these numeric variables are "Audio Features" for a track, ranging in values from 0.00-1.00, with 1.00 being the highest. Based on their website, "danceability" describes how suitable a track is for dancing based on a combination of musical elements including tempo, rhythm stability, beat strength, and overall regularity. 0.00 is least danceable and 1.0 is the most danceable. "Energy" represents a perceptual measure of intensity and activity. Energetic tracks feel fast, loud, and noisy. For example, death metal has high energy, while classical music scores low on the scale. Perceptual features contributing to this attribute include dynamic range, perceived loudness, timbre, onset rate, and general entropy. "Valence" describes the musical positiveness conveyed by a track. Tracks with high valence sound more positive (e.g. happy, cheerful, euphoric), while tracks with low valence sound more negative (e.g. sad, depressed, angry). 
+
+# 1.) Tidying: Rearranging Wide/Long 
+
+```{R}
+bey<-read.csv("bey.csv")
+sol<-read.csv("sol.csv")
+
+library(tidyverse)
+library(dplyr)
+library(ggplot2)
+
+#Removing x
+bey<-bey%>%select(-X)
+sol<-sol%>%select(-X)
+
+
+#Removing artist name and album names to tidy specifically for Beyoncé
+bey->minusbey
+select(minusbey,-artist)->tidyingbey
+select(tidyingbey,-album)->tidyingbey
+tidyingbey
+#Untidying Beyoncé
+tidyingbey%>%pivot_longer(c("danceability","energy","valence"),names_to="audio features",values_to="value")->pivotedbey
+pivotedbey
+#Tidying again
+pivotedbey%>%pivot_wider(names_from="audio features",values_from="value")->widetidybey
+widetidybey
+#Solange's turn
+sol->minussol
+select(minussol,-artist)->tidyingsol
+select(tidyingsol,-album)->tidyingsol
+tidyingsol
+#Untidying Solange
+tidyingsol%>%pivot_longer(c("danceability","energy","valence"),names_to="audio features",values_to="value")->pivotedsol
+pivotedsol
+#Tidying back to normal 
+pivotedsol%>%pivot_wider(names_from="audio features",values_from="value")->widetidysol
+widetidysol
+```
+
+I tidyed my "sol" and "bey" data, removing the artist because that will not be needed until the datasets are joined together in order to distinguish Beyoncé from Solange. My data was already tidy, so I made them untidy with pivot_longer. Initially, the columns were "track," "danceability," "energy," and "valence." However, I pivoted_longer and changed the column titles to be "audio features," and created another column titled "value." This created two additional observations for each song in order to indicate each measure of audio features under the column "audio feature," followed by a column of values. 
+
+#2.) Joining/Merging
+```{R}
+bind_rows(bey,sol)->beysol
+beysol%>%select(artist,album,track,danceability,energy,valence)
+beysol->newofficialbeysol
+newofficialbeysol->beysol
+```
+Disclaimer: I was told in office hours (by the professor himself) on February 27th that because I went through the hassle of figuring out Spotify's API- I could just use "bind_rows" to join my data. I am using this join because it was recommended to me by the professor. No cases were dropped as data was provided for all observations. 
+
+#3.) Wrangling
+```{R}
+
+#filter(), arrange()
+##Top Five Energetic songs of Beyoncé and Solange
+
+###1)
+beysol%>%filter(artist=="Beyoncé")%>%arrange(desc(energy))%>%slice(1:5)
+
+###2)
+beysol%>%filter(artist=="Solange")%>%arrange(desc(energy))%>%slice(1:5)
+
+#mutate(), group_by()
+##Average Audio Track Feature
+
+###3)
+beysol%>%group_by(track)%>%mutate(average=mean((energy+valence+danceability)/3))%>%arrange(desc(average))->avg
+avg%>%select(artist,album,track,average)->avg1
+avg1
+
+#select() 
+
+##4) extrapolating "Lemonade"                                               
+beysol%>%filter(album=="Lemonade")%>%select(-artist,-danceability,-energy)->lemonade
+lemonade
+
+##5) extrapolating "When I Get Home"
+beysol%>%filter(album=="When I Get Home")%>%select(-artist,-danceability,-energy)->whenigethome
+whenigethome
+
+#summarize()
+
+##Summarizing (finding the mean of) the audio features
+
+###6) For both sisters
+beysol%>%summarize(mean(danceability),mean(energy),mean(valence))->meanaudiofeatures
+meanaudiofeatures
+
+##Summarizing the mean for each artist
+
+###7) Beyoncé
+beysol%>%filter(artist=="Beyoncé")%>%summarize(mean(danceability),mean(energy),mean(valence))
+
+###8) Solange
+beysol%>%filter(artist=="Solange")%>%summarize(mean(danceability),mean(energy),mean(valence))
+
+##summarizing mean for each recent album
+
+###9.) Lemonade
+beysol%>%filter(album=="Lemonade")%>%summarize(mean(danceability),mean(energy),mean(valence))
+
+###10.) When I Get Home
+beysol%>%filter(album=="When I Get Home")%>%summarize(mean(danceability),mean(energy),mean(valence))
+```
+With my dataset, I wanted to see the top five most energetic songs of Beyoncé and Solange, respectively (#1 & #2). Using "filter," I was able to pick out Beyoncé's music, and by using "arrange," I was able to sort her songs by descending energy. Beyonce's most energentic song is "Suga Mama," with an energy level of 0.939 out of 1.0. Solange's most energetic song is "Dance With You," with an energy level of 0.925. Since energy, valence, and danceability all range from 0-1 and all of their higher levels indicate more positive, upbeat, and danceable songs, I decided to average the three numeric variables (#6) for every song to get the "Average Audio Feature Level," ranging from 0.0-1.0 (by using "mutate()"). The closer an average is to 1.0, the more upbeat, danceable, and positive a song is. The song with the highest average audio features turned out to be the song "Dance With You" by Solange at 0.827.
+
+For my visualizations, I wanted to be able to measure the valence of Beyoncé and Solange's most recent albums by song. I was able to do this by using "select." Visualization from this is in the second gg plot under #4. Last but not least, I found the mean danceability, energy, and valence, respectively, for both sisters, each sister, and of each sister's most recent album. Their joint means ranged from 0.50-0.62. Beyoncé's music is more energetic but less "danceable" and "happier" (valence) than Solange's, and Beyoncé's album, "Lemonade," has more energy and valence than Solange's most recent album, "When I Get Home" (which makes sense because "Lemonade"" was really just one big slap in the face to Jay-Z).
+
+
+#4) Visualizing
+```{R}
+#Correlation Heat Map of numeric variables (danceability, energy, valence)
+beysol<-read.csv("beysol.csv")
+beysol%>%select_if(is.numeric)%>%cor%>%as.data.frame%>%
+rownames_to_column%>%pivot_longer(-1)%>%
+ggplot(aes(rowname,name,fill=value))+geom_tile()+scale_fill_gradient2(low="#CC0033", mid="#FF9966",high="#FFFF99")+
+geom_text(aes(label=round(value,2)))+
+xlab("")+ylab("")+ggtitle("Correlation Heat Map!")
+```
+For my correlation heat map, it appears that valence and danceability are more correlated (0.5) than valence and energy (0.34), and danceability and energy (0.27).
+```{R}
+#GG PLOT (1/2)
+ggplot(beysol,aes(x=artist,y=danceability,fill=album))+geom_bar(stat="summary",fun.y="mean",position="dodge")+geom_errorbar(stat="summary",position="dodge")+scale_y_continuous(breaks=seq(0,.8,.05))+ggtitle("DANCEABILITY")+xlab("Artist")+ylab("Danceability (by Album)")
+```
+In my first GG plot, I calculated danceability by each artist, looking at each sisters' respective discographies. Beyonce's earliest albums, "Dangerously in Love" and "B'Day" had the highest danceability levels (.63 and .66, respectively), with "Lemonade" having the lowest danceability at 0.52. For Solange, her earliest albums, "Solo Star" and "True" also had the highest danceability levels (.69 and .72, respectively), with her later albums also having lower danceability levels. 
+```{R}
+#GG PLOT (2/2)
+
+bind_rows(lemonade,whenigethome)->recentalbums
+ggplot(recentalbums,aes(x=reorder(track,valence),y=valence,fill=track))+geom_bar(stat="summary", fun.y="mean",position="dodge")+facet_grid(album~.,scales="free_y")+coord_flip()+theme(legend.position = "none")+ggtitle("Valence of Most Recent Albums (by Song)")+xlab("Songs")+ylab("Valence")
+```
+For my second GG plot, I measured the valence of each song off of Beyonce and Solange's most recent solo albums (extracting this information seen in #'s 4-5 of 3.) Wrangling). The song "Formation" off of "Lemonade"" is deemed as the "happiest song" with a valence of 0.81. The song "Stay Flo" (also my top played song on Spotify in 2019) off of "When I Get Home" is deemed as the happiest song, with a valence of 0.6740.
+
+#5) Dimensionality Reduction
+```{R}
+library(cluster)
+#1.) Process Data
+beysolnum<-beysol%>%select(-artist,-album,-track)
+
+#2.) Choose # of Clusters
+sil_width<-vector()
+for(i in 2:10){
+  kms<-kmeans(beysolnum,centers=i)
+  sil<-silhouette(kms$cluster,dist(beysolnum))
+  sil_width[i]<-mean(sil[,3])
+}
+ggplot()+geom_line(aes(x=1:10,y=sil_width))+scale_x_continuous(name="k",breaks=1:10)
+
+#3.) Run Cluster Analysis (k-means)
+kmeans<-beysolnum%>%scale%>%kmeans(2)
+kmeans
+
+#4.) Interpret Clusters
+final<-beysol%>%mutate(cluster=as.factor(kmeans$cluster))%>%select(-artist,-album,-track)
+final
+confmat<-final%>%group_by(valence,danceability)%>%count(cluster)%>%arrange(desc(n))%>%pivot_wider(names_from="cluster",values_from="n",values_fill=list('n'=0))
+confmat
+
+#5.) Visualize Clusters
+library(GGally)
+ggplot(final,aes(x=valence,y=danceability,color=cluster))+geom_point()+scale_y_continuous(breaks=seq(0,1,.1))+scale_x_continuous(breaks=seq(0,1,.1))+ggtitle("Clustering!")
+```
+I ran a cluster analysis (kmeans) of my data, consisting of 146 points for every song of Beyoncé and Solange in my dataset. As a result of my calculations (#2), I decided to analyze my data with 2 clusters. Since valence and danceability are the numeric variables that correlate the highest (0.50), I decided to run my clusters based on these two numeric variables. Cluster 1 (n=91) consists of songs that are low to middle (0- 0.7) in valence and danceability, while Cluster 2 (n=55) consists of songs that are higher in danceability and valence. There is one outlier in cluster 2 (valence=.065, danceability=.83). Considering that each and every song, whether its performed by Beyoncé or Solange, has its own unique danceability, valence, and energy level ranging from 0.0-1.0, down to the ten-thousandths, it is understandable as to why my datapoints are not as stable, thus appearing to be spaced out. 
