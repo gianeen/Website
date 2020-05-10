@@ -23,6 +23,7 @@ theme = "hugo-sustain"
 
   email= "gianeenmagno@gmail.com"
 
+
 ## Main Menu
 [[menu.main]]
   name = "blog"
