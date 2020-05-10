@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589128535507.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "3773367018",
+    "id" : "70A58809",
+    "lastKnownWriteTime" : 1589130477,
+    "last_content_update" : 1589130477112,
+    "path" : "~/Desktop/Website/content/resume2020.Rmd",
+    "project_path" : "content/resume2020.Rmd",
+    "properties" : {
+        "cursorPosition" : "70,0",
+        "scrollLine" : "60",
+        "tempName" : "Untitled1"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 7,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}

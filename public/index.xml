@@ -1,15 +1,28 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Portfolio</title>
+    <title>hi, i&#39;m gianeen</title>
     <link>/</link>
-    <description>Recent content on Portfolio</description>
+    <description>Recent content on hi, i&#39;m gianeen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
     <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
+    
+    <item>
+      <title>About</title>
+      <link>/about/</link>
+      <pubDate>Sun, 02 Oct 2016 22:55:05 -0400</pubDate>
+      
+      <guid>/about/</guid>
+      <description>Who Am I? Hi THERE!! My name is Gianeen hehehehe. Here is my mf resume
+EXCLUDE THE FOLLOWING:
+  Exploratory Data Analysis with Tidyverse Tools: Beyoncé versus Solange
+  Modeling, Testing, and Classification of Beyoncé and Solange&amp;rsquo;s Music
+  </description>
+    </item>
     
     <item>
       <title>Projects</title>
@@ -96,6 +109,22 @@ Follow the following steps:
       <guid>/project2gbm/</guid>
       <description>Just running some libraries
 library(vegan) ## Loading required package: permute ## Loading required package: lattice ## This is vegan 2.5-6 library(zoo) ## ## Attaching package: &amp;#39;zoo&amp;#39; ## The following objects are masked from &amp;#39;package:base&amp;#39;: ## ## as.Date, as.Date.numeric library(lmtest) library(tidyverse) ## ── Attaching packages ───────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.2.1 ✓ purrr 0.3.3 ## ✓ tibble 2.1.3 ✓ dplyr 0.8.5 ## ✓ tidyr 1.0.2 ✓ stringr 1.4.0 ## ✓ readr 1.</description>
+    </item>
+    
+    <item>
+      <title>Resume</title>
+      <link>/resume2020/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>/resume2020/</guid>
+      <description>EDUCATION
+The University of Texas at Austin • May 2020
+• B.S.A. Biology, College of Natural Sciences
+• B.A. Health and Society (Concentration: Health and the Economy), College of Liberal Arts
+• Business of Healthcare Certificate, McCombs School of Business
+EXPERIENCE
+Osier Laboratory, Dell Medical School • May 2018-Present • Research Assistant
+• Research barriers that prevent children from being admitted into emergency departments in order to devise ways that deconstruct parents’ hesitancies towards hospitals</description>
     </item>
     
   </channel>
