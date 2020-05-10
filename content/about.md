@@ -17,12 +17,18 @@ title: About
 ###### Right after graduation, I will be conducting research with CDF-TX, where I will be investigating health disparities across race, ethnicity, and immigration in Texas. I will also be researching test access, diagnosis, and death rates for ethnic and racial minorities amidst COVID-19 in Texas. All of these efforts will be collectively utilized to push for policy change that ensures access to health for all children in the state of Texas. How neat is that?!
 
 
-### [🤠 HERE IS MY RESUME 🤠](/resume2020/)
+### [Click here to view my resume! 🤠](/resume2020/)
 
 ## Academic and career goals aside, I enjoy:
 - spending time with the people I love 🥺💖
   - Whether it's a party of many or a kickback of less than five, count me in! 
-- listening to music 🎶 (Follow me on [Spotify](https://open.spotify.com/user/125854231?si=m_n665TSSza6lwENz2ZZoA)!)
+  - I often spend many nights having *deep and existential* parked car conversations with my homies in vacant lots with Indie or Soft R&B music playing in the background.
+- listening to music 🎶 (Follow me on [Spotify](https://open.spotify.com/user/125854231?si=m_n665TSSza6lwENz2ZZoA)!) My playlists are my babies. Here are some of my favorties that I've made:
+  - For [parked car convos, late night drives, or spending quality time](https://open.spotify.com/playlist/46A4v3Jq2a2eminSaHpZqN?si=13aYgKu1SxKS4OTbe4Alog)
+  - My [favorite R&B songs](https://open.spotify.com/playlist/3bdPJ0U8WTgGdTIuzJBWKM?si=yIHxPl08RzivVJayFZ0dXg) as of late- I listen to this when getting ready or when I feel like dancing! 
+  - A *beautiful yet chilling* compilation of [ethereal female artists](https://open.spotify.com/playlist/7oboSyMUAKLQg9LtsYZism?si=xe2nD9gbS-6YsHDTLBmPpg) (think Indie, R&B, Bedroom Pop)
+  - Can't forget [male artists](https://open.spotify.com/playlist/335q4KPIL1YynBJBBwmtEW?si=u20NsoTLT8a4DmNzOb9xhQ) too! 
+  - The soundtrack behind a [hot girl summer](https://open.spotify.com/playlist/3Ep75sc6f8Gg2NubhZDIHC?si=QY_MZyCtTgCeLYXW3_4GlQ), circa 2019 (perfect for 2020 in quarantine!)
 - #DoingThings🧢
   - long distance running🏃
   - hiking 🥾 ⛰️
