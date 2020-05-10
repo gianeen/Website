@@ -36,6 +36,6 @@ title: About
   - news and politics (I love keeping up with the news! I prefer anything [NPR](https://open.spotify.com/show/2mTUnDkuKUkhiueKcVWoP0?si=pXXedT07RYS_df33lvBDaA) or [New York Times](https://open.spotify.com/show/3IM0lmZxpFAY7CwMuv9H4g?si=Y_4YOCM8R5iIypEAHF_YTA), but admittedly, I've withdrawn from listening amidst COVID-19 era and all of the political tension going on in the administration- gotta protect your mental health somehow!)
 - learning about how I can work on myself for the sake of a) being kind to myself and b) being a better friend, daughter, sister, student, stranger, global citizen, and contributor to society🙂
   - this Instagram account has taught me how to [uphold healthy boundaries](https://www.instagram.com/nedratawwab/) in my life 
-  - this one has taught me how to [understand others better, as well as overcome any fears or adversitites](https://www.instagram.com/the.holistic.psychologist/)
+  - this one has taught me how to [understand others better, as well as overcome any self-made fear or adversity](https://www.instagram.com/the.holistic.psychologist/)
   - this one has taught me [how to healthily reassure myself that I am doing my best and that I will get to where I am meant to be](https://www.instagram.com/werenotreallystrangers/)
 
