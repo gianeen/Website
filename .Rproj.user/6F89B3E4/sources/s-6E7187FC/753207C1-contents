@@ -18,7 +18,12 @@ title: About
 
 ###### Right after graduation, I will be conducting research with CDF-TX, where I will be investigating health disparities across race, ethnicity, and immigration in Texas. I will also be researching test access, diagnosis, and death rates for ethnic and racial minorities amidst COVID-19 in Texas. All of these efforts will be collectively utilized to push for policy change that ensures access to health for all children in the state of Texas. How neat is that?!
 
-##### Anywho, this page was born because my Comp Bio professor, Nathaniel, required us to code our own website for our final project in this class. And if I'm being honest, I had a lot of fun making it.  Because of this class, I have a newfound appreciation for the art of coding. This class is probably one of my favorite classes I've taken at UT! I highly recommend taking this class (SDS 348) with Nathaniel if you get the chance. 
+###### Anywho, this page was born because my Comp Bio professor, Nathaniel, required us to code our own website for our final project in this class. And if I'm being honest, I had a lot of fun making it.  
+
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/97254307_3568526086497176_4159093806567784448_o.jpg?_nc_cat=110&_nc_sid=730e14&_nc_ohc=HEsRg0WH498AX_ErqWs&_nc_ht=scontent-dfw5-1.xx&oh=ee25d22a5cfe6e0b0ff7c6f852e279c6&oe=5EDF529F) 
+*behind the scenes of making this website*
+
+###### Because of this class, I have a newfound appreciation for the art of coding. This class is probably one of my favorite classes I've taken at UT! I highly recommend taking this class (SDS 348) with Nathaniel if you get the chance. 
 
 ### [Click here to view my resume! 🤠](/resume2020/)
 
@@ -47,3 +52,5 @@ title: About
   - this Instagram account has taught me how to [uphold healthy boundaries](https://www.instagram.com/nedratawwab/) in my life 
   - this one has taught me [how to understand others better, as well as overcome any self-made fear or adversity](https://www.instagram.com/the.holistic.psychologist/)
   - this one has taught me [how to healthily reassure myself that I am doing my best and that life will eventually lead me to where I am meant to be](https://www.instagram.com/werenotreallystrangers/)
+  
+###### Alright, now go ahead and browse the rest of my site! 
