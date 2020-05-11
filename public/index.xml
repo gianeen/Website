@@ -6,7 +6,7 @@
     <description>Recent content on gianeen</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-US</language>
-    <lastBuildDate>Sun, 02 Oct 2016 22:55:05 -0400</lastBuildDate>
+    <lastBuildDate>Fri, 01 May 2020 00:00:00 +0000</lastBuildDate>
     
 	<atom:link href="/index.xml" rel="self" type="application/rss+xml" />
     
@@ -19,6 +19,25 @@
       <guid>/blog/expressing-gratitude-using-python-and-r/</guid>
       <description>So- you’re graduating in 13 days, you want to express some gratitude to the people you’ve met along the way during your past four years in college, and you have a project due in 5 days which requires you to demonstrate to your professor that you understand the value in and know how to execute using Python and R together.
 Have no fear! Today I’m going to show you how you can do just that.</description>
+    </item>
+    
+    <item>
+      <title>Project 2</title>
+      <link>/project2gbm/</link>
+      <pubDate>Fri, 01 May 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project2gbm/</guid>
+      <description>Just running some libraries
+library(vegan) ## Loading required package: permute ## Loading required package: lattice ## This is vegan 2.5-6 library(zoo) ## ## Attaching package: &amp;#39;zoo&amp;#39; ## The following objects are masked from &amp;#39;package:base&amp;#39;: ## ## as.Date, as.Date.numeric library(lmtest) library(tidyverse) ## ── Attaching packages ──────────────────────────────────────────────────────────────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.2.1 ✓ purrr 0.3.4 ## ✓ tibble 2.1.3 ✓ dplyr 0.8.5 ## ✓ tidyr 1.0.2 ✓ stringr 1.4.0 ## ✓ readr 1.</description>
+    </item>
+    
+    <item>
+      <title>Project 1- Beyoncé vs Solange: Which Knowles Sister is More Likely to Make You Get Up and Groove? by Gianeen Magno </title>
+      <link>/project1gbm/</link>
+      <pubDate>Sun, 15 Mar 2020 00:00:00 +0000</pubDate>
+      
+      <guid>/project1gbm/</guid>
+      <description>0.) Introduction The datasets that I have chosen are the audio features of Beyoncé Knowles and Solange Knowles’ tracks that are available on Spotify, specifically, their solo discographies that are studio albums and non-special edition. This dataset was tediously acquired by installing the package “spotifyr” and utilizing “Spotify for Developers” on Spotify’s website, as well as spending a/n (large) amount of time figuring out how to use Spotify’s API. I mainly decided to do this because I’ve always wondered how Spotify develops music suggestions based on users’ listening histories, and it was very interesting to see that there are so many components that goes behind a track in order to curate a playlist- from “Your Daily Mix” to “Discover Weekly.</description>
     </item>
     
     <item>
@@ -40,25 +59,6 @@ Have no fear! Today I’m going to show you how you can do just that.</descripti
       
       <guid>/about/</guid>
       <description>About: Hey there! My name is Gianeen. I&amp;rsquo;m a Chipotle connoisseur, avid R&amp;amp;B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). I happily split my time in between Austin and Houston (H-town hold it down)! I will be graduating this May from The University of Texas at Austin with a Bachelor of Science and Arts in Biology, a Bachelor of Arts in Health and Society (with a concentration in Health and the Economy), and a Business of Healthcare certificate.</description>
-    </item>
-    
-    <item>
-      <title>Project 1- Beyoncé vs Solange: Which Knowles Sister is More Likely to Make You Get Up and Groove? by Gianeen Magno </title>
-      <link>/project1gbm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/project1gbm/</guid>
-      <description>0.) Introduction The datasets that I have chosen are the audio features of Beyoncé Knowles and Solange Knowles’ tracks that are available on Spotify, specifically, their solo discographies that are studio albums and non-special edition. This dataset was tediously acquired by installing the package “spotifyr” and utilizing “Spotify for Developers” on Spotify’s website, as well as spending a/n (large) amount of time figuring out how to use Spotify’s API. I mainly decided to do this because I’ve always wondered how Spotify develops music suggestions based on users’ listening histories, and it was very interesting to see that there are so many components that goes behind a track in order to curate a playlist- from “Your Daily Mix” to “Discover Weekly.</description>
-    </item>
-    
-    <item>
-      <title>Project 2</title>
-      <link>/project2gbm/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>/project2gbm/</guid>
-      <description>Just running some libraries
-library(vegan) ## Loading required package: permute ## Loading required package: lattice ## This is vegan 2.5-6 library(zoo) ## ## Attaching package: &amp;#39;zoo&amp;#39; ## The following objects are masked from &amp;#39;package:base&amp;#39;: ## ## as.Date, as.Date.numeric library(lmtest) library(tidyverse) ## ── Attaching packages ───────── tidyverse 1.3.0 ── ## ✓ ggplot2 3.2.1 ✓ purrr 0.3.3 ## ✓ tibble 2.1.3 ✓ dplyr 0.8.5 ## ✓ tidyr 1.0.2 ✓ stringr 1.4.0 ## ✓ readr 1.</description>
     </item>
     
     <item>
