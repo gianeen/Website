@@ -1,0 +1,47 @@
+---
+title: "Expressing Gratitude Using Python and R"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+Ever wanted to express some gratitude to the people you went to school with for the past four years because you're graduating in 13 days and started writing on R (because Microsoft Word is overrated) but then learned how to use Python while having a project due in 5 days and you need to show your professor how to use Python and R together? Because same. So I took all my problems and combined them into one. 
+
+First, I used 'ol reliable, RStudio. I figured since I'm thanking everyone, I might as well start off every messge of gratitude with "thank you for". 
+```{R}
+install.packages('reticulate')
+library(reticulate)
+ty<-"thank you for"
+```
+With handy-dandy Python, I began to differentiate the messages I had for each pal. 
+```{python}
+rachel= "being my best friend and for always wanting what is best for me."
+print('Rachel,',r.ty,rachel)
+nolo= "being the most levelheaded person I've ever met. You've definitely impacted my perspective on life for the better by emulating emotional agility. King moves only."
+print('Nolo,',r.ty,nolo)
+richard= "being my go-to."
+print('Papa Rich,',r.ty,richard)
+patricia= "being my go-to."
+print('Patricia,',r.ty,patricia)
+abel= "eooow."
+print('Abel,',r.ty,abel)
+kenneth= "running at 6:30 am with me over Lady Bird Lake followed by harmonizing on the ukelele together for free Tyson's tacos."
+print('Kenneth,',r.ty,kenneth)
+francine="showing me that you can be soft and strong and loving all in one."
+print('Francine,',r.ty,francine)
+danny= "being so chill and for lighting up my day with your science pun t-shirts that Francine wishes you wore less."
+print('Danny,',r.ty,danny)
+felipe= "being you."
+print('Felipe,',r.ty,felipe)
+melkon= "being an amazing husband to our children!"
+print('Melkon,',r.ty,melkon)
+kamea= "teaching me so much."
+print('Kamea,',r.ty,kamea)
+phoebe= "ugh where do I start."
+print('Phoebe,',r.ty,phoebe)
+zoe= "being the best roommate a girl could ever ask for. I'll always cherish our conversations in the living room. I LOVE YOU!"
+print('Zoe,',r.ty,zoe)
+frjimmy= "being the best priest out there. I'm so sad I never got to wear the apron I made of you, but life." 
+print('Fr. Jimmy,',r.ty,frjimmy)
+```

@@ -22,11 +22,11 @@ title: About
 ## Academic and career goals aside, I enjoy:
 - spending time with the people I love 🥺💖
   - Whether it's a party of many or a kickback of less than five, count me in! 
-  - I often spend many nights having *deep and existential* parked car conversations with my homies in vacant lots with Indie or Soft R&B music playing in the background.
+  - I am well-versed in having *deep and existential* parked car conversations in vacant parking lots.
 - listening to music 🎶 (Follow me on [Spotify](https://open.spotify.com/user/125854231?si=m_n665TSSza6lwENz2ZZoA)!) My playlists are my babies. Here are some of my favorties that I've made:
   - For [parked car convos, late night drives, or spending quality time](https://open.spotify.com/playlist/46A4v3Jq2a2eminSaHpZqN?si=13aYgKu1SxKS4OTbe4Alog)
   - My [favorite R&B songs](https://open.spotify.com/playlist/3bdPJ0U8WTgGdTIuzJBWKM?si=yIHxPl08RzivVJayFZ0dXg) as of late- I listen to this when getting ready or when I feel like dancing! 
-  - A *beautiful yet chilling* compilation of [ethereal female artists](https://open.spotify.com/playlist/7oboSyMUAKLQg9LtsYZism?si=xe2nD9gbS-6YsHDTLBmPpg) (think Indie, R&B, Bedroom Pop)
+  - A *beautiful yet chilling* compilation of [ethereal female artists](https://open.spotify.com/playlist/7oboSyMUAKLQg9LtsYZism?si=xe2nD9gbS-6YsHDTLBmPpg) (think Alt./Chill/Soft Indie, R&B, Pop)
   - Can't forget [male artists](https://open.spotify.com/playlist/335q4KPIL1YynBJBBwmtEW?si=u20NsoTLT8a4DmNzOb9xhQ) too! 
   - The soundtrack behind a [hot girl summer](https://open.spotify.com/playlist/3Ep75sc6f8Gg2NubhZDIHC?si=QY_MZyCtTgCeLYXW3_4GlQ), circa 2019 (perfect for 2020 in quarantine!)
 - #DoingThings🧢

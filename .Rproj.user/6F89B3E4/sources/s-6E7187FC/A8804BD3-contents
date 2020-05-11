@@ -1,0 +1,19 @@
+---
+title: "Blog Post"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+```{R}
+install.packages("reticulate")
+library(reticulate)
+hi<-"Hello"
+```
+
+```{python}
+hi="world"
+print(r.hi,hi)
+```

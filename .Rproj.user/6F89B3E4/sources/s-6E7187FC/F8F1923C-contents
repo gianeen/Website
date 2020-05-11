@@ -1,0 +1,57 @@
+---
+title: "Expressing Gratitude Using Python and R"
+author: "by Gianeen Magno"
+date: 2020-05-10T21:13:14-05:00
+categories: ["R"]
+tags: ["R Markdown", "plot", "regression"]
+---
+
+
+
+<p>Ever wanted to express some gratitude to the people you went to school with for the past four years because you’re graduating in 13 days and started writing on R (because Microsoft Word is overrated) but then learned how to use Python while having a project due in 5 days and you need to show your professor how to use Python and R together? Because same. So I took all my problems and combined them into one.</p>
+<p>First, I used ’ol reliable, RStudio. I figured since I’m thanking everyone, I might as well start off every messge of gratitude with “thank you for”.</p>
+<pre class="r"><code>library(reticulate)
+ty&lt;-&quot;thank you for&quot;</code></pre>
+<p>With handy-dandy Python, I began to differentiate the messages I had for each pal.</p>
+<pre class="python"><code>rachel= &quot;being my best friend and for always wanting what is best for me.&quot;
+print(&#39;Rachel,&#39;,r.ty,rachel)
+## Rachel, thank you for being my best friend and for always wanting what is best for me.
+nolo= &quot;being the most levelheaded person I&#39;ve ever met. You&#39;ve definitely impacted my perspective on life for the better by emulating emotional agility. King moves only.&quot;
+print(&#39;Nolo,&#39;,r.ty,nolo)
+## Nolo, thank you for being the most levelheaded person I&#39;ve ever met. You&#39;ve definitely impacted my perspective on life for the better by emulating emotional agility. King moves only.
+richard= &quot;being my go-to.&quot;
+print(&#39;Papa Rich,&#39;,r.ty,richard)
+## Papa Rich, thank you for being my go-to.
+patricia= &quot;being my go-to.&quot;
+print(&#39;Patricia,&#39;,r.ty,patricia)
+## Patricia, thank you for being my go-to.
+abel= &quot;eooow.&quot;
+print(&#39;Abel,&#39;,r.ty,abel)
+## Abel, thank you for eooow.
+kenneth= &quot;running at 6:30 am with me over Lady Bird Lake followed by harmonizing on the ukelele together for free Tyson&#39;s tacos.&quot;
+print(&#39;Kenneth,&#39;,r.ty,kenneth)
+## Kenneth, thank you for running at 6:30 am with me over Lady Bird Lake followed by harmonizing on the ukelele together for free Tyson&#39;s tacos.
+francine=&quot;showing me that you can be soft and strong and loving all in one.&quot;
+print(&#39;Francine,&#39;,r.ty,francine)
+## Francine, thank you for showing me that you can be soft and strong and loving all in one.
+danny= &quot;being so chill and for lighting up my day with your science pun t-shirts that Francine wishes you wore less.&quot;
+print(&#39;Danny,&#39;,r.ty,danny)
+## Danny, thank you for being so chill and for lighting up my day with your science pun t-shirts that Francine wishes you wore less.
+felipe= &quot;being you.&quot;
+print(&#39;Felipe,&#39;,r.ty,felipe)
+## Felipe, thank you for being you.
+melkon= &quot;being an amazing husband to our children!&quot;
+print(&#39;Melkon,&#39;,r.ty,melkon)
+## Melkon, thank you for being an amazing husband to our children!
+kamea= &quot;teaching me so much.&quot;
+print(&#39;Kamea,&#39;,r.ty,kamea)
+## Kamea, thank you for teaching me so much.
+phoebe= &quot;ugh where do I start.&quot;
+print(&#39;Phoebe,&#39;,r.ty,phoebe)
+## Phoebe, thank you for ugh where do I start.
+zoe= &quot;being the best roommate a girl could ever ask for. I&#39;ll always cherish our conversations in the living room. I LOVE YOU!&quot;
+print(&#39;Zoe,&#39;,r.ty,zoe)
+## Zoe, thank you for being the best roommate a girl could ever ask for. I&#39;ll always cherish our conversations in the living room. I LOVE YOU!
+frjimmy= &quot;being the best priest out there. I&#39;m so sad I never got to wear the apron I made of you, but life.&quot;
+print(&#39;Fr. Jimmy,&#39;,r.ty,frjimmy)
+## Fr. Jimmy, thank you for being the best priest out there. I&#39;m so sad I never got to wear the apron I made of you, but life.</code></pre>

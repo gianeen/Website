@@ -1,0 +1,26 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1589158390884.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "1274457557",
+    "id" : "25230C68",
+    "lastKnownWriteTime" : 1589160431,
+    "last_content_update" : 1589160431097,
+    "path" : "~/Desktop/Website/content/blog/2020-05-10-expressing-gratitude-using-python-and-r.Rmd",
+    "project_path" : "content/blog/2020-05-10-expressing-gratitude-using-python-and-r.Rmd",
+    "properties" : {
+        "cursorPosition" : "25,79",
+        "last_setup_crc32" : "6E7187FCbb338d19",
+        "scrollLine" : "20"
+    },
+    "read_only" : false,
+    "read_only_alternatives" : [
+    ],
+    "relative_order" : 9,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_markdown"
+}
