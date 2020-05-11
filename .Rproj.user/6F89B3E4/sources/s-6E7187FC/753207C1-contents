@@ -6,7 +6,7 @@ tags:
 - about
 title: About
 ---
-## About Me:
+## About:
 
 ![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/96054463_3568500869833031_3008143962532741120_n.jpg?_nc_cat=109&_nc_sid=730e14&_nc_ohc=mqnAr4Nu81EAX8mySNO&_nc_ht=scontent-dfw5-1.xx&oh=4060e54d4638afe2737011d6d42747e0&oe=5EDF60C5)
 
@@ -17,6 +17,8 @@ title: About
 ###### I am interested in learning about how social factors affect people's health and well-being. More specifically, I am interested in the intersection between policy and health outcomes of those who face a harder time accessing adequate healthcare, and how we can improve policy to decrease such barriers. Through my interdisciplinary education and interests, I aspire to make an impact towards improving the provision of healthcare- for **health is a human right!**
 
 ###### Right after graduation, I will be conducting research with CDF-TX, where I will be investigating health disparities across race, ethnicity, and immigration in Texas. I will also be researching test access, diagnosis, and death rates for ethnic and racial minorities amidst COVID-19 in Texas. All of these efforts will be collectively utilized to push for policy change that ensures access to health for all children in the state of Texas. How neat is that?!
+
+##### Anywho, this page was born because my Comp Bio professor, Nathaniel, required us to code our own website for our final project in this class. And if I'm being honest, I had a lot of fun making it.  Because of this class, I have a newfound appreciation for the art of coding. This class is probably one of my favorite classes I've taken at UT! I highly recommend taking this class (SDS 348) with Nathaniel if you get the chance. 
 
 ### [Click here to view my resume! 🤠](/resume2020/)
 
