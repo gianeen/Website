@@ -17,3 +17,5 @@ git add .
 git commit -m "any message, but you must have a message"
 
 git push origin master
+
+# ![](/Users/gianeenmagno/Desktop/Website/static/img/rachelandme.jpg){width=30%}

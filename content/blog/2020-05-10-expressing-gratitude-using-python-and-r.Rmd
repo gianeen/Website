@@ -17,7 +17,7 @@ Have no fear! Today I'm going to show you how you can do just that. *"But Gianee
 
 Alright, enough blabbering. Let's get to it (Warning- these are really long and sentimental- but this is my last college project ever at the University of Texas at Austin, so why not go all out?) 
 
-First, I used 'ol reliable, RStudio. I figured since I'm thanking everyone, I might as well start off every messge of gratitude with "thank you for". 
+First, I used 'ol reliable, RStudio. I figured since I'm thanking everyone, I might as well start off every message of gratitude with "thank you for". 
 ```{R}
 library(reticulate)
 ty<-"Thank you for"
