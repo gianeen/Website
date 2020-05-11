@@ -7,3 +7,11 @@ blogdown::new_site(theme="nurlansu/hugo-sustain")
 
 blogdown::serve_site()
 getwd()
+
+#refresh
+
+git add .
+
+git commit -m "any message, but you must have a message"
+
+git push origin master

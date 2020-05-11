@@ -23,7 +23,7 @@ With handy-dandy Python, I began to differentiate the messages I had for each pa
 rachel= "being my best friend and for always wanting what is best for me."
 print('Rachel,',r.ty,rachel)
 ```
-![](/Users/gianeenmagno/Desktop/Website/content/blog/rachelandme.jpg){ width=30% }
+![](/Users/gianeenmagno/Desktop/Website/static/img/rachelandme.jpg){ width=30% }
 ```{python}
 nolo= "being the most levelheaded person I've ever met. You've definitely impacted my perspective on life for the better by emulating emotional agility. King moves only."
 print('Nolo,',r.ty,nolo)
