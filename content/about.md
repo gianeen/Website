@@ -10,7 +10,7 @@ title: About
 
 ![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/96054463_3568500869833031_3008143962532741120_n.jpg?_nc_cat=109&_nc_sid=730e14&_nc_ohc=mqnAr4Nu81EAX8mySNO&_nc_ht=scontent-dfw5-1.xx&oh=4060e54d4638afe2737011d6d42747e0&oe=5EDF60C5)
 
-######  Hey there! My name is Gianeen. I'm a Chipotle connoisseur, avid R&B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). I happily split my time in between Austin and Houston (H-town hold it down)!
+######  Hey there! My name is Gianeen. I'm a Chipotle connoisseur, avid R&B music listener, and a proud dog mom to [two mixed Shih Tzus- Buddy (12) and Benji (7)](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/83643514_3314111228605331_8040071305145352192_o.jpg?_nc_cat=101&_nc_sid=0debeb&_nc_ohc=CJFmn2Ciq00AX834ihT&_nc_ht=scontent-dfw5-1.xx&oh=cb20a0826255a6f549bb3b65ebe5a052&oe=5EDE0FDB). I happily split my time in between Austin and Houston (H-town hold it down)!
 
 ###### I will be graduating this May from The University of Texas at Austin with a Bachelor of Science and Arts in Biology, a Bachelor of Arts in Health and Society (with a concentration in Health and the Economy), and a Business of Healthcare certificate.
 
