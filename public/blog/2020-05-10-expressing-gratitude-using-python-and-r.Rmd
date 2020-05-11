@@ -27,9 +27,14 @@ With handy-dandy Python, I began to differentiate the messages I had for each pa
 Rachel:
 ```{python}
 rachel= "being my best friend and for always wanting what is best for me. Through this, you've always treated me with love, even if the truth hurt. Thanks for taking my temperature when we lived together when I had the flu and sorry you ended up getting sick. Ha. You know how much I love you and am eternally grateful for you. Love ya my future maid of honor."
+```
+
+Now, I'm going to integrate R and Python together using the python function 'print(), integrating R text using "r.*r code here*",*python code here*)
+```{python}
 print(r.ty,rachel)
 ```
-![](/Users/gianeenmagno/Desktop/Website/static/img/rachelandme.jpg){width=30%}
+![](https://drive.google.com/file/d/17ibfeSsNiG6PuzGY5IaDmc6oavJANSov/view?usp=sharing)
+
 
 Nolo:
 ```{python}
@@ -97,4 +102,4 @@ Fr. Jimmy:
 frjimmy= "being the best priest out there. I'm so sad I never got to wear the apron I made of you, but life. I am excited to see the lives you will touch in the coming future!" 
 print(r.ty,frjimmy)
 ```
-
+If you read this far, thank you. Have a nice day. :^)
