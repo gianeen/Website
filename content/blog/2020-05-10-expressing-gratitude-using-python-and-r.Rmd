@@ -36,70 +36,96 @@ print(r.ty,rachel)
 ![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/53514165_2638714362811691_7514876064171032576_n.jpg?_nc_cat=109&_nc_sid=8bfeb9&_nc_ohc=AOv8Vwv8HJAAX--g3PH&_nc_ht=scontent-dfw5-1.xx&oh=22a5b028120c2d7e1e1f2ec0fdc3001a&oe=5EDF7E43){width=60%}
 
 
+
 Nolo:
 ```{python}
 nolo= "being the most levelheaded person I've ever met. You've definitely impacted my perspective on life for the better by emulating emotional agility. The way your mind works is one of the most captivating things I've ever witnessed- you're full of jokes bro. King moves only!!!! I'm so proud of you."
 print(r.ty,nolo)
 ```
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/96669690_3567228586626926_2214617757817765888_n.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=UVMgc-v0kZkAX-jYfNP&_nc_ht=scontent-dfw5-2.xx&oh=ce4ac075687d93a689946b15d3a7dea5&oe=5EDE5349){width=60%}
 
 Richard:
 ```{python}
 richard= "completing my senior year at UT. You have a big heart and you've always been a listening ear and a shoulder to cry on. Never called someone my best friend so quickly! Looking forward to seeing how our friendship will blossom after only knowing each other for 7 MONTHS. ILY MAN."
 print(r.ty,richard)
 ```
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/89791124_3417866238229829_9031858100801372160_n.jpg?_nc_cat=104&_nc_sid=0debeb&_nc_ohc=FTA_I2_qaDcAX_cKXN9&_nc_ht=scontent-dfw5-2.xx&oh=813b9ac6a35a7faca634e4aaab642b28&oe=5EDDB0A5){width=50%}
+
 Patricia:
 ```{python}
 patricia= "being the little sister I've never had. You *truly* know and understand me better than most people do, and I cannot thank God enough for everything we share- from singing together at Eagle's Wings to our late night car convos in front of Kins- the friendship we share is full of faith accountability, endless laughter, and more. You're going to go places farther than you can ever imagine and I just know it! Don't lose hope :)"
 print(r.ty,patricia)
 ```
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/97154189_3567233796626405_3978886951741685760_o.jpg?_nc_cat=102&_nc_sid=730e14&_nc_ohc=0mmFCHeu4dwAX_pusIH&_nc_ht=scontent-dfw5-2.xx&oh=fa1ca4cae5cd7859389a6689a810f852&oe=5EDE269F){width=60%}
+
 Abel:
 ```{python}
 abel= "having the most dynamic yet healthy friendship possible with me. I love how when we're together at 2AM it can either be 6th Street or the PCL. I've seen you grow so much as an individual these past 4 years and I'm so proud of how far you've come! You're truly a friend for life. Thank you for always keeping me in check and for having fun while we're at it. Can't wait to see where life takes you."
 print(r.ty,abel)
 ```
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/75478479_3240607595955695_7961755475605716992_n.jpg?_nc_cat=105&_nc_sid=a4a2d7&_nc_ohc=FlVT2KUonaMAX96C7QP&_nc_ht=scontent-dfw5-1.xx&oh=fc28d415312c6da6c4712b0c77717300&oe=5EDEEE57){width=60%}
+
 Kenneth:
 ```{python}
 kenneth= "running at 6:30 am with me over Lady Bird Lake followed by harmonizing on the ukelele together for free Tyson's tacos. I'm going to miss those days so much! You're awesome and I'm confident that you will achieve whatever you put your mind to. :) "
 print(r.ty,kenneth)
 ```
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/86411318_3353731531309967_3667251688181334016_n.jpg?_nc_cat=101&_nc_sid=0debeb&_nc_ohc=3hKFfsuPApsAX8cijpJ&_nc_ht=scontent-dfw5-1.xx&oh=994055f8c8ac0d160605f3450373976a&oe=5EDEF8CC){ width=60% }
+
 Francine:
 ```{python}
 francine="showing me that you can be soft and strong and loving all-in-one. I'm going to miss our workout sessions and study dates around the city (Bennu, Mozarts, the public library!!!) as well as our trips to Trader Joe's or even the OV sample sales. You're going to kill it in NYC! Just *please* don't catch COVID-19 while you're at it. Love ya."
 print(r.ty,francine)
 ```
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/84786161_3314110595272061_2396395269299109888_n.jpg?_nc_cat=108&_nc_sid=0debeb&_nc_ohc=U3iKpx1BXsYAX97zgcZ&_nc_ht=scontent-dfw5-2.xx&oh=6d74320a06801d65251687055063875f&oe=5EDF3414){width=60%}
+
 Danny:
 ```{python}
 danny= "thinking I'm funny. Seriously. I didn't think I was cool until I realized how much you laughed at everything I said. HAHA just kidding. Thank you for always being such a joy to be around. You've always been so reliable and trustworthy and I know I can come to you for anything. I'm going to miss seeing your science pun t-shirts and sharing Bob with you after LA meetings."
 print(r.ty,danny)
 ```
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/49380244_2525449290804866_784642163647447040_n.jpg?_nc_cat=108&_nc_sid=0debeb&_nc_ohc=KFWgNfRseUYAX-Mwi5M&_nc_ht=scontent-dfw5-2.xx&oh=7e82cdcbdd763d50fc08fc6831d71638&oe=5EDFF3D2){width=60%}
+
 Felipe:
 ```{python}
 felipe= "being the best dance partner I've ever had! Seriously. I'll always cherish our ukelele jam sesh at Tyson's. You definitely know how to radiate joy and positivity in every room you walk into. You have an alluring charisma that makes people feel comfortable and safe to be themselves. Thank you for checking up on me and for always cheering me on. I can't wait to see you thrive! You got this!"
 print(r.ty,felipe)
 ```
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/96724343_3567245646625220_7975569829891407872_o.jpg?_nc_cat=100&_nc_sid=730e14&_nc_ohc=vITm9T5nCa8AX8KOGvg&_nc_ht=scontent-dfw5-2.xx&oh=fe80902c170d309990fd79131a83ac32&oe=5EDD545D){width=60%}
+
 Melkon:
 ```{python}
 melkon= "being an amazing husband to nine children ;) I'm so glad I got to meet you. Thank you for being there for me during my most vulnerable times senior year, and for exemplifying Christ so evidently in all that you do. You've taught me more than you'll ever know and have inspired me to continue to do and be better no matter what, all in the name of optimism and trust in Him. Can't wait to see how you'll thrive throughout the rest of your time at UT and for the rest of your life :)"
 print(r.ty,melkon)
 ```
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/72943768_3113707905312332_9022695737263128576_n.jpg?_nc_cat=105&_nc_sid=0debeb&_nc_ohc=UxwscKnU_k0AX_lpJ_J&_nc_ht=scontent-dfw5-1.xx&oh=a48ed37d2dfde37ee820f25a94f6f99f&oe=5EDF0A2C){width=60%}
+
 Kamea:
 ```{python}
 kamea= "opening your heart and sharing your story. You are more captivating and compelling than you'll ever know, I can promise you that. You are so wise and have taught me so much in what it means to keep on trekking despite unfavorable situations that may come in the way. I love you, I love you, I love you. You are beautiful, you are worthy. You are so loved. Hawai'i isn't ready!"
 print(r.ty,kamea)
 ```
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/86261825_3043938842292149_6882482343613825024_n.jpg?_nc_cat=103&_nc_sid=0debeb&_nc_ohc=S-8--3KXh_cAX-Y33jZ&_nc_ht=scontent-dfw5-1.xx&oh=2c08a9d6dc1d109f46295a893f4b12a6&oe=5EDD6593){width=60%}
+
 Phoebe:
 ```{python}
 phoebe= "so much. So so much. I honestly don't even know where to begin. Through all our shared experiences (the lab, the UCC, past roomies) we continue to grow closer and more trusting of each other. Thank you for creating a safe space where I can be vulnerable. You are an expert at creating a welcoming and comfortable environment for anyone and everyone, especially me. Your grit, resilience, and desire to always be inclusive is going to take you so far. I'm so excited to see where life takes you. Love you forever!"
 print(r.ty,phoebe)
 ```
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/80499394_3215898155093306_6890422320804921344_n.jpg?_nc_cat=103&_nc_sid=0debeb&_nc_ohc=xTOPtIdkaD0AX_IzQtl&_nc_ht=scontent-dfw5-1.xx&oh=0563d077ab48b86fad1923c4234a2013&oe=5EDF7463){width=60%}
+
 Zoe:
 ```{python}
 zoe= "being the best random roommate to friend for life a girl could ever ask for. I'll always cherish our conversations in the living room and I can't wait to see where life takes you. Can't wait to refer people to you one day my future psychiatrist! I LOVE YOU!"
 print(r.ty,zoe)
 ```
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/93110812_3171175866235112_6260585523128041472_n.jpg?_nc_cat=108&_nc_sid=0debeb&_nc_ohc=wMkr5maooN4AX8yjtoQ&_nc_ht=scontent-dfw5-2.xx&oh=4b5fa611ffff9c0e59a7a49b9910cd32&oe=5EDDFCE8){width=60%}
+
 Fr. Jimmy:
 ```{python}
 frjimmy= "being the best priest out there. I'm so sad I never got to wear the apron I made of you, but life. I am excited to see the lives you will touch in the coming future!" 
 print(r.ty,frjimmy)
 ```
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/89352577_3417858698230583_1759368150907879424_n.jpg?_nc_cat=101&_nc_sid=0debeb&_nc_ohc=-qhSAs9PDJ8AX_sHC-k&_nc_ht=scontent-dfw5-1.xx&oh=cb4865bc74942f028daa627016f7c6b4&oe=5EE00F9B){width=60%}
+
 If you read this far, thank you. Have a nice day. :^)
