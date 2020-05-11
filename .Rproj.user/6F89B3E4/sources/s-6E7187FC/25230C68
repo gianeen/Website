@@ -5,16 +5,16 @@
     "dirty" : false,
     "encoding" : "UTF-8",
     "folds" : "",
-    "hash" : "483342098",
+    "hash" : "1004039747",
     "id" : "25230C68",
-    "lastKnownWriteTime" : 1589172808,
-    "last_content_update" : 1589172808563,
+    "lastKnownWriteTime" : 1589175613,
+    "last_content_update" : 1589175613753,
     "path" : "~/Desktop/Website/content/blog/2020-05-10-expressing-gratitude-using-python-and-r.Rmd",
     "project_path" : "content/blog/2020-05-10-expressing-gratitude-using-python-and-r.Rmd",
     "properties" : {
-        "cursorPosition" : "51,240",
+        "cursorPosition" : "39,134",
         "last_setup_crc32" : "6E7187FCbb338d19",
-        "scrollLine" : "44"
+        "scrollLine" : "36"
     },
     "read_only" : false,
     "read_only_alternatives" : [

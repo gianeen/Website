@@ -29,13 +29,15 @@ Rachel:
 rachel= "being my best friend and for always wanting what is best for me. Through this, you've always treated me with love, even if the truth hurt. Thanks for taking my temperature when we lived together when I had the flu and sorry you ended up getting sick. Ha. You know how much I love you and am eternally grateful for you. Love ya my future maid of honor."
 ```
 
-Now, I'm going to integrate R and Python together using the python function 'print()', inserting the following text within the round brackets "*r code* , *python code*": 
+Now, I'm going to integrate R and Python together using the python function 'print()', inserting the following text within the round brackets "*r.r code* , *python code*": 
 ```{python}
 print(r.ty,rachel)
 ```
 ![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/53514165_2638714362811691_7514876064171032576_n.jpg?_nc_cat=109&_nc_sid=8bfeb9&_nc_ohc=AOv8Vwv8HJAAX--g3PH&_nc_ht=scontent-dfw5-1.xx&oh=22a5b028120c2d7e1e1f2ec0fdc3001a&oe=5EDF7E43){width=60%}
 
+And there you have it! A message of gratitude for your friend using Python and R! How snazzy! 
 
+*The rest are just a repetition of above / a of couple thank-you's for my friends that they'll run into once they hop onto my site :)*
 
 Nolo:
 ```{python}
