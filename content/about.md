@@ -8,7 +8,7 @@ title: About
 ---
 ## About Me:
 
-######  Hey there! My name is Gianeen. I'm a Chipotle connoisseur, avid R&B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). I happily split my time in between Austin and Houston 
+######  Hey there! My name is Gianeen. I'm a Chipotle connoisseur, avid R&B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). I happily split my time in between Austin and Houston (H-town hold it down)!
 
 ###### I will be graduating this May from The University of Texas at Austin with a Bachelor of Science and Arts in Biology, a Bachelor of Arts in Health and Society (with a concentration in Health and the Economy), and a Business of Healthcare certificate.
 
