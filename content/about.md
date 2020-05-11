@@ -20,7 +20,7 @@ title: About
 
 ###### Anywho, this page was born because my Comp Bio professor, Nathaniel, required us to code our own website for our final project in this class. And if I'm being honest, I had a lot of fun making it.  
 
-![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/97254307_3568526086497176_4159093806567784448_o.jpg?_nc_cat=110&_nc_sid=730e14&_nc_ohc=HEsRg0WH498AX_ErqWs&_nc_ht=scontent-dfw5-1.xx&oh=ee25d22a5cfe6e0b0ff7c6f852e279c6&oe=5EDF529F) 
+![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/97088077_3568572209825897_5227612894501273600_o.jpg?_nc_cat=107&_nc_sid=730e14&_nc_ohc=DCrAucTY8E0AX_t0luM&_nc_ht=scontent-dfw5-2.xx&oh=e8ad15dc044390bad48544141df0b27e&oe=5EE101FF) 
 *behind the scenes of making this website*
 
 ###### Because of this class, I have a newfound appreciation for the art of coding. This class is probably one of my favorite classes I've taken at UT! I highly recommend taking this class (SDS 348) with Nathaniel if you get the chance. 
