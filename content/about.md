@@ -32,7 +32,7 @@ title: About
 - spending time with the people I love 🥺💖
   - Whether it's a party of many or a kickback of less than five, count me in! 
   - I am well-experienced in late night, *deep and existential* parked car conversations in vacant parking lots
-- listening to music 🎶 (Follow me on [Spotify](https://open.spotify.com/user/125854231?si=m_n665TSSza6lwENz2ZZoA)!) My playlists are my babies. Here are some of my favorties that I've made:
+- listening to music 🎶 (Follow me on [Spotify](https://open.spotify.com/user/125854231?si=m_n665TSSza6lwENz2ZZoA)!) My playlists are my babies. Here are some of my favorites that I've made:
   - For [parked car convos, late night drives, or spending quality time](https://open.spotify.com/playlist/46A4v3Jq2a2eminSaHpZqN?si=13aYgKu1SxKS4OTbe4Alog)
   - My [favorite R&B songs](https://open.spotify.com/playlist/3bdPJ0U8WTgGdTIuzJBWKM?si=yIHxPl08RzivVJayFZ0dXg) as of late- I listen to this when getting ready or when I feel like dancing! 
   - A *beautiful yet chilling* compilation of [ethereal female artists](https://open.spotify.com/playlist/7oboSyMUAKLQg9LtsYZism?si=xe2nD9gbS-6YsHDTLBmPpg) (think Alt./Chill/Soft Indie, R&B, Pop)
