@@ -8,6 +8,8 @@ title: About
 ---
 ## About Me:
 
+![](https://scontent-dfw5-1.xx.fbcdn.net/v/t1.0-9/96054463_3568500869833031_3008143962532741120_n.jpg?_nc_cat=109&_nc_sid=730e14&_nc_ohc=mqnAr4Nu81EAX8mySNO&_nc_ht=scontent-dfw5-1.xx&oh=4060e54d4638afe2737011d6d42747e0&oe=5EDF60C5)
+
 ######  Hey there! My name is Gianeen. I'm a Chipotle connoisseur, avid R&B music listener, and a proud dog mom to two mixed Shih Tzus- Buddy (12) and Benji (7). I happily split my time in between Austin and Houston (H-town hold it down)!
 
 ###### I will be graduating this May from The University of Texas at Austin with a Bachelor of Science and Arts in Biology, a Bachelor of Arts in Health and Society (with a concentration in Health and the Economy), and a Business of Healthcare certificate.
@@ -15,7 +17,6 @@ title: About
 ###### I am interested in learning about how social factors affect people's health and well-being. More specifically, I am interested in the intersection between policy and health outcomes of those who face a harder time accessing adequate healthcare, and how we can improve policy to decrease such barriers. Through my interdisciplinary education and interests, I aspire to make an impact towards improving the provision of healthcare- for **health is a human right!**
 
 ###### Right after graduation, I will be conducting research with CDF-TX, where I will be investigating health disparities across race, ethnicity, and immigration in Texas. I will also be researching test access, diagnosis, and death rates for ethnic and racial minorities amidst COVID-19 in Texas. All of these efforts will be collectively utilized to push for policy change that ensures access to health for all children in the state of Texas. How neat is that?!
-
 
 ### [Click here to view my resume! 🤠](/resume2020/)
 
