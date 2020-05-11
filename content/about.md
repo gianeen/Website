@@ -54,3 +54,4 @@ title: About
   - this one has taught me [how to healthily reassure myself that I am doing my best and that life will eventually lead me to where I am meant to be](https://www.instagram.com/werenotreallystrangers/)
   
 ###### Alright, now go ahead and browse the rest of my site! 
+-Gia
