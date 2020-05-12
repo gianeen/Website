@@ -16,8 +16,6 @@ title: About
 
 ###### I am interested in learning about how social factors affect people's health and well-being. More specifically, I am interested in the intersection between policy and health outcomes of those who face a harder time accessing adequate healthcare, and how we can improve policy to decrease such barriers. Through my interdisciplinary education and interests, I aspire to make an impact towards improving the provision of healthcare- for **health is a human right!**
 
-###### Right after graduation, I will be conducting research with CDF-TX, where I will be investigating health disparities across race, ethnicity, and immigration in Texas. I will also be researching test access, diagnosis, and death rates for ethnic and racial minorities amidst COVID-19 in Texas. All of these efforts will be collectively utilized to push for policy change that ensures access to health for all children in the state of Texas. How neat is that?! I am grateful beyond words to be trusted enough to contribute to CDF-TX's mission and can't wait to see where this opportunity will take me and how it will shape me as a contributor to society!
-
 ###### Anywho, this page was born because my Comp Bio professor, Nathaniel, required us to code our own website for our final project in this class. And if I'm being honest, I had a lot of fun making it.  
 
 ![](https://scontent-dfw5-2.xx.fbcdn.net/v/t1.0-9/97088077_3568572209825897_5227612894501273600_o.jpg?_nc_cat=107&_nc_sid=730e14&_nc_ohc=DCrAucTY8E0AX_t0luM&_nc_ht=scontent-dfw5-2.xx&oh=e8ad15dc044390bad48544141df0b27e&oe=5EE101FF) 
